@@ -4,7 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./car
 import { Input } from "./input";
 import { Textarea } from "./textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./select";
-import { MapPin, Mail, Star, Clock, Phone } from "lucide-react";
+import { MapPin, Mail, Star, Clock, Phone, Facebook } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 export const ContactSection = () => {
@@ -258,14 +258,18 @@ ${formData.message}
                 
                 <div className="flex space-x-4">
                   <a 
-                    href="#" 
+                    href="https://www.facebook.com/torobar14thst/reviews" 
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="flex items-center space-x-2 text-gray-300 hover:text-blue-400 transition-colors"
                   >
-                    <Star className="h-4 w-4" />
+                    <Facebook className="h-4 w-4" />
                     <span>Facebook Reviews</span>
                   </a>
                   <a 
-                    href="#" 
+                    href="https://www.google.com/search?q=toro+bar+14th+street+washington+dc+reviews&oq=toro+bar+14th+street+washington+dc+reviews"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="flex items-center space-x-2 text-gray-300 hover:text-blue-400 transition-colors"
                   >
                     <Star className="h-4 w-4" />
