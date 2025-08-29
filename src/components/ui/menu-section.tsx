@@ -1,4 +1,6 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./card";
+import { Button } from "./button";
+import { Download } from "lucide-react";
 
 const featuredDrinks = [
   {
@@ -74,6 +76,21 @@ export const MenuSection = () => {
           <p className="text-gray-400 mb-6">
             Full menu available at the bar • Seasonal specials • Custom cocktails upon request
           </p>
+          
+          <div className="mb-8">
+            <Button 
+              className="luxury-button"
+              onClick={() => {
+                // For now, this will alert that PDF should be uploaded
+                // Replace with actual PDF link once uploaded
+                alert("Please upload your PDF menu to the public folder and update this link");
+              }}
+            >
+              <Download className="h-4 w-4 mr-2" />
+              Download Full Menu (PDF)
+            </Button>
+          </div>
+
           <div className="space-y-4 sm:space-y-0 sm:space-x-4 sm:flex sm:justify-center">
             <div className="text-center">
               <h4 className="text-white font-semibold mb-2">Happy Hour</h4>
