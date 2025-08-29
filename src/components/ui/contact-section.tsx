@@ -258,16 +258,16 @@ ${formData.message}
                 
                 <div className="flex space-x-4">
                   <a 
-                    href="https://www.facebook.com/torobar14thst/reviews" 
+                    href="https://www.facebook.com/torobardc3708/" 
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center space-x-2 text-gray-300 hover:text-blue-400 transition-colors"
                   >
                     <Facebook className="h-4 w-4" />
-                    <span>Facebook Reviews</span>
+                    <span>Facebook Page</span>
                   </a>
                   <a 
-                    href="https://www.google.com/search?q=toro+bar+14th+street+washington+dc+reviews&oq=toro+bar+14th+street+washington+dc+reviews"
+                    href="https://www.google.com/search?sca_esv=509bbfbba140ee12&hl=en-US&q=Toro+Bar&si=AMgyJEtREmoPL4P1I5IDCfuA8gybfVI2d5Uj7QMwYCZHKDZ-Eyfdd2vky-9K0f2ufr6LvqPxrszCqGE8VvtkYVKOv8HRCd8kZEqpAiIfjLNwcdk0YDskDB00rKa2YewxZUlcgVLU1o5B&sa=X&ved=2ahUKEwjrovOGqa-PAxWuQjABHXsGJrUQrrQLegQIHBAA&biw=1512&bih=857&dpr=2"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center space-x-2 text-gray-300 hover:text-blue-400 transition-colors"
