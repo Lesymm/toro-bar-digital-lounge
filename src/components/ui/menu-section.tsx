@@ -80,11 +80,18 @@ export const MenuSection = () => {
           <div className="mb-8">
           <Button 
             className="luxury-button"
-            onClick={() => window.open('/menu.pdf', '_blank')}
+            asChild
+          >
+            <a 
+              href="/menu.pdf" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              download="toro-bar-menu.pdf"
             >
               <Download className="h-4 w-4 mr-2" />
               Download Full Menu (PDF)
-            </Button>
+            </a>
+          </Button>
           </div>
 
           <div className="space-y-4 sm:space-y-0 sm:space-x-4 sm:flex sm:justify-center">
