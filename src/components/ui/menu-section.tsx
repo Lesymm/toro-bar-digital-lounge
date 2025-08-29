@@ -78,13 +78,9 @@ export const MenuSection = () => {
           </p>
           
           <div className="mb-8">
-            <Button 
-              className="luxury-button"
-              onClick={() => {
-                // For now, this will alert that PDF should be uploaded
-                // Replace with actual PDF link once uploaded
-                alert("Please upload your PDF menu to the public folder and update this link");
-              }}
+          <Button 
+            className="luxury-button"
+            onClick={() => window.open('/menu.pdf', '_blank')}
             >
               <Download className="h-4 w-4 mr-2" />
               Download Full Menu (PDF)
