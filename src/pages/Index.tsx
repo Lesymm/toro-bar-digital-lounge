@@ -1,12 +1,63 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useState } from "react";
+import { Navigation } from "@/components/ui/navigation";
+import { HeroSection } from "@/components/ui/hero-section";
+import { MenuSection } from "@/components/ui/menu-section";
+import { GallerySection } from "@/components/ui/gallery-section";
+import { ContactSection } from "@/components/ui/contact-section";
+import { Footer } from "@/components/ui/footer";
 
 const Index = () => {
+  const [currentPage, setCurrentPage] = useState("home");
+
+  const handlePageChange = (page: string) => {
+    setCurrentPage(page);
+    
+    // Smooth scroll to sections
+    if (page === "home") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      const element = document.getElementById(page);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  };
+
+  const handleBookEvent = () => {
+    setCurrentPage("contact");
+    const element = document.getElementById("contact");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-black">
+      <Navigation currentPage={currentPage} onPageChange={handlePageChange} />
+      
+      <main>
+        {/* Hero Section */}
+        <section id="home">
+          <HeroSection onBookEvent={handleBookEvent} />
+        </section>
+
+        {/* Menu Section */}
+        <section id="menu">
+          <MenuSection />
+        </section>
+
+        {/* Gallery Section */}
+        <section id="gallery">
+          <GallerySection />
+        </section>
+
+        {/* Contact Section */}
+        <section id="contact">
+          <ContactSection />
+        </section>
+      </main>
+
+      <Footer />
     </div>
   );
 };
