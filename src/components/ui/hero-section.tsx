@@ -49,6 +49,12 @@ export const HeroSection = ({ onBookEvent }: HeroSectionProps) => {
           <Button 
             variant="outline" 
             className="border-gray-400 text-gray-300 hover:bg-white hover:text-black transition-all duration-300 text-lg px-10 py-4"
+            onClick={() => {
+              const element = document.getElementById("menu");
+              if (element) {
+                element.scrollIntoView({ behavior: "smooth" });
+              }
+            }}
           >
             View Menu
           </Button>
