@@ -282,11 +282,11 @@ export const ContactSection = () => {
               </CardHeader>
               <CardContent className="space-y-4">
                 <a 
-                  href="mailto:waseem@tranquilmedia.com"
+                  href="mailto:torobardc@gmail.com"
                   className="flex items-center space-x-2 text-gray-300 hover:text-blue-400 transition-colors"
                 >
                   <Mail className="h-4 w-4" />
-                  <span>waseem@tranquilmedia.com</span>
+                  <span>torobardc@gmail.com</span>
                 </a>
                 
                 <div className="space-y-3">

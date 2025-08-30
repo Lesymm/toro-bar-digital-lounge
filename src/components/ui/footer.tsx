@@ -79,7 +79,7 @@ export const Footer = () => {
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p className="text-gray-500 text-sm">
-            &copy; 2024 Toro Bar. All rights reserved. | Website by Tranquil Media
+            &copy; 2024 Toro Bar. All rights reserved. | Website by <a href="https://tranquilmedia.com" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 transition-colors">Tranquil Media</a>
           </p>
         </div>
       </div>
