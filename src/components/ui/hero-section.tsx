@@ -20,7 +20,7 @@ export const HeroSection = ({ onBookEvent }: HeroSectionProps) => {
       <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
         <div className="mb-8">
           <img 
-            src="/lovable-uploads/2efa85dc-d3a6-4021-8b67-d0eecf003a94.png" 
+            src="/toro-logo.png" 
             alt="Toro Bar Logo" 
             className="h-32 w-32 mx-auto mb-6 animate-float"
           />

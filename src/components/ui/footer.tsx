@@ -9,7 +9,7 @@ export const Footer = () => {
           <div className="text-center md:text-left">
             <div className="flex items-center justify-center md:justify-start space-x-2 mb-4">
               <img 
-                src="/lovable-uploads/2efa85dc-d3a6-4021-8b67-d0eecf003a94.png" 
+                src="/toro-logo.png" 
                 alt="Toro Bar Logo" 
                 className="h-8 w-8"
               />
