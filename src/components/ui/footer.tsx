@@ -59,14 +59,18 @@ export const Footer = () => {
               </a>
               <div className="flex items-center justify-center md:justify-end space-x-4">
                 <a 
-                  href="#" 
+                  href="https://www.facebook.com/torobardc3708/" 
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex items-center space-x-1 text-gray-400 hover:text-blue-400 transition-colors"
                 >
                   <Star className="h-4 w-4" />
                   <span>Facebook</span>
                 </a>
                 <a 
-                  href="#" 
+                  href="https://www.google.com/search?q=Toro+Bar+Washington+DC"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex items-center space-x-1 text-gray-400 hover:text-blue-400 transition-colors"
                 >
                   <Star className="h-4 w-4" />
