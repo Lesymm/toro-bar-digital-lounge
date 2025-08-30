@@ -3,6 +3,7 @@ import { Navigation } from "@/components/ui/navigation";
 import { HeroSection } from "@/components/ui/hero-section";
 import { MenuSection } from "@/components/ui/menu-section";
 import { GallerySection } from "@/components/ui/gallery-section";
+import { InstagramSection } from "@/components/ui/instagram-section";
 import { ContactSection } from "@/components/ui/contact-section";
 import { Footer } from "@/components/ui/footer";
 
@@ -49,6 +50,11 @@ const Index = () => {
         {/* Gallery Section */}
         <section id="gallery">
           <GallerySection />
+        </section>
+
+        {/* Instagram Section */}
+        <section id="instagram">
+          <InstagramSection />
         </section>
 
         {/* Contact Section */}
