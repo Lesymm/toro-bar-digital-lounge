@@ -1,4 +1,5 @@
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
 import { Button } from "./button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./card";
 import { Input } from "./input";
@@ -9,6 +10,7 @@ import { useToast } from "@/hooks/use-toast";
 
 export const ContactSection = () => {
   const { toast } = useToast();
+  const [isLoading, setIsLoading] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -21,32 +23,59 @@ export const ContactSection = () => {
     message: ""
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setIsLoading(true);
     
-    // Create mailto link with form data
-    const subject = `Event Inquiry - ${formData.eventType}`;
-    const body = `
-Name: ${formData.name}
-Email: ${formData.email}
-Event Type: ${formData.eventType}
-Date: ${formData.date}
-Number of Guests: ${formData.guests}
-Number of Hours: ${formData.hours}
-Private or Semi-Private: ${formData.privateEvent}
-Bar Option: ${formData.barOption}
-
-Additional Details:
-${formData.message}
-    `;
-    
-    const mailtoLink = `mailto:waseem@tranquilmedia.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    window.location.href = mailtoLink;
-    
-    toast({
-      title: "Event Inquiry Sent!",
-      description: "Your email client will open with the inquiry details. We'll get back to you within 24 hours.",
-    });
+    try {
+      // EmailJS configuration
+      const serviceID = "service_jhm3k8j";
+      const templateID = "template_2p43ptb";
+      const publicKey = "Q8806e5qKIZWdvdv0";
+      
+      // Template parameters matching your EmailJS template
+      const templateParams = {
+        from_name: formData.name,
+        reply_to: formData.email,
+        event_type: formData.eventType,
+        event_date: formData.date,
+        guest_count: formData.guests,
+        duration: formData.hours,
+        private_event: formData.privateEvent,
+        bar_option: formData.barOption,
+        message: formData.message || "No additional details provided."
+      };
+      
+      await emailjs.send(serviceID, templateID, templateParams, publicKey);
+      
+      toast({
+        title: "Event Inquiry Sent!",
+        description: "Your event inquiry has been submitted successfully. We'll get back to you within 24 hours.",
+      });
+      
+      // Reset form
+      setFormData({
+        name: "",
+        email: "",
+        eventType: "",
+        date: "",
+        guests: "",
+        hours: "",
+        privateEvent: "",
+        barOption: "",
+        message: ""
+      });
+      
+    } catch (error) {
+      console.error("EmailJS Error:", error);
+      toast({
+        title: "Error",
+        description: "Failed to send your inquiry. Please try again or contact us directly.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const handleInputChange = (field: string, value: string) => {
@@ -184,8 +213,12 @@ ${formData.message}
                   />
                 </div>
 
-                <Button type="submit" className="luxury-button w-full">
-                  Send Event Inquiry
+                <Button 
+                  type="submit" 
+                  className="luxury-button w-full"
+                  disabled={isLoading}
+                >
+                  {isLoading ? "Sending..." : "Send Event Inquiry"}
                 </Button>
               </form>
             </CardContent>
