@@ -40,7 +40,7 @@ Additional Details:
 ${formData.message}
     `;
     
-    const mailtoLink = `mailto:torobardc@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    const mailtoLink = `mailto:waseem@tranquilmedia.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     window.location.href = mailtoLink;
     
     toast({
@@ -249,11 +249,11 @@ ${formData.message}
               </CardHeader>
               <CardContent className="space-y-4">
                 <a 
-                  href="mailto:torobardc@gmail.com"
+                  href="mailto:waseem@tranquilmedia.com"
                   className="flex items-center space-x-2 text-gray-300 hover:text-blue-400 transition-colors"
                 >
                   <Mail className="h-4 w-4" />
-                  <span>torobardc@gmail.com</span>
+                  <span>waseem@tranquilmedia.com</span>
                 </a>
                 
                 <div className="flex space-x-4">
