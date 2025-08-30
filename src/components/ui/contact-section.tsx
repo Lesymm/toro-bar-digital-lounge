@@ -4,7 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./car
 import { Input } from "./input";
 import { Textarea } from "./textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./select";
-import { MapPin, Mail, Star, Clock, Phone, Facebook } from "lucide-react";
+import { MapPin, Mail, Star, Clock, Phone, Facebook, Instagram } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 export const ContactSection = () => {
@@ -256,25 +256,37 @@ ${formData.message}
                   <span>waseem@tranquilmedia.com</span>
                 </a>
                 
-                <div className="flex space-x-4">
+                <div className="space-y-3">
                   <a 
-                    href="https://www.facebook.com/torobardc3708/" 
+                    href="https://instagram.com/torobar14th_st" 
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center space-x-2 text-gray-300 hover:text-blue-400 transition-colors"
                   >
-                    <Facebook className="h-4 w-4" />
-                    <span>Facebook Page</span>
+                    <Instagram className="h-4 w-4" />
+                    <span>@torobar14th_st</span>
                   </a>
-                  <a 
-                    href="https://www.google.com/search?sca_esv=509bbfbba140ee12&hl=en-US&q=Toro+Bar&si=AMgyJEtREmoPL4P1I5IDCfuA8gybfVI2d5Uj7QMwYCZHKDZ-Eyfdd2vky-9K0f2ufr6LvqPxrszCqGE8VvtkYVKOv8HRCd8kZEqpAiIfjLNwcdk0YDskDB00rKa2YewxZUlcgVLU1o5B&sa=X&ved=2ahUKEwjrovOGqa-PAxWuQjABHXsGJrUQrrQLegQIHBAA&biw=1512&bih=857&dpr=2"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center space-x-2 text-gray-300 hover:text-blue-400 transition-colors"
-                  >
-                    <Star className="h-4 w-4" />
-                    <span>Google Reviews</span>
-                  </a>
+                  
+                  <div className="flex space-x-4">
+                    <a 
+                      href="https://www.facebook.com/torobardc3708/" 
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center space-x-2 text-gray-300 hover:text-blue-400 transition-colors"
+                    >
+                      <Star className="h-4 w-4" />
+                      <span>Facebook</span>
+                    </a>
+                    <a 
+                      href="https://www.google.com/search?q=Toro+Bar+Washington+DC"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center space-x-2 text-gray-300 hover:text-blue-400 transition-colors"
+                    >
+                      <Star className="h-4 w-4" />
+                      <span>Google</span>
+                    </a>
+                  </div>
                 </div>
               </CardContent>
             </Card>
