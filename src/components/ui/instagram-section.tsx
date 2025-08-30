@@ -27,29 +27,58 @@ export const InstagramSection = () => {
   `;
 
   return (
-    <section className="py-16 bg-gradient-to-b from-gray-900 to-black">
-      <div className="container mx-auto px-4 text-center">
-        <div className="flex items-center justify-center gap-3 mb-8">
-          <Instagram className="h-6 w-6 text-primary" />
-          <h2 className="text-3xl md:text-4xl font-bold text-white">
-            Latest from Instagram
-          </h2>
+    <section className="py-20 bg-gradient-to-b from-gray-900 via-black to-gray-900 relative overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute top-20 left-10 w-32 h-32 border border-primary rounded-full"></div>
+        <div className="absolute bottom-20 right-10 w-48 h-48 border border-primary rounded-full"></div>
+        <div className="absolute top-1/2 left-1/4 w-24 h-24 border border-primary rounded-full"></div>
+      </div>
+      
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center justify-center gap-4 mb-6 p-4 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-full border border-primary/20">
+            <div className="w-12 h-12 bg-gradient-to-tr from-purple-500 via-pink-500 to-orange-500 rounded-full flex items-center justify-center shadow-lg">
+              <Instagram className="h-6 w-6 text-white" />
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-white via-gray-100 to-gray-300 bg-clip-text text-transparent">
+              Latest from Instagram
+            </h2>
+          </div>
+          <div className="w-24 h-1 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto mb-8"></div>
         </div>
         
-        {/* Instagram Embed */}
-        <div 
-          className="max-w-lg mx-auto mb-8"
-          dangerouslySetInnerHTML={{ __html: embedCode }}
-        />
+        {/* Instagram Embed with Enhanced Styling */}
+        <div className="flex flex-col items-center space-y-8">
+          <div className="relative">
+            {/* Glow effect behind embed */}
+            <div className="absolute -inset-4 bg-gradient-to-r from-purple-500/20 via-pink-500/20 to-orange-500/20 rounded-2xl blur-xl"></div>
+            <div className="relative bg-black/20 backdrop-blur-sm rounded-2xl p-6 border border-primary/30">
+              <div 
+                className="max-w-lg mx-auto"
+                dangerouslySetInnerHTML={{ __html: embedCode }}
+              />
+            </div>
+          </div>
 
-        <Button 
-          onClick={() => window.open(instagramUrl, '_blank')}
-          className="luxury-button text-base px-6 py-2 group"
-        >
-          <Instagram className="h-4 w-4 mr-2" />
-          Follow {instagramHandle}
-          <ExternalLink className="h-3 w-3 ml-2 opacity-70" />
-        </Button>
+          <div className="text-center space-y-4">
+            <Button 
+              onClick={() => window.open(instagramUrl, '_blank')}
+              className="luxury-button animate-glow-pulse text-lg px-8 py-4 group relative overflow-hidden"
+            >
+              <div className="absolute inset-0 bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="relative flex items-center">
+                <Instagram className="h-5 w-5 mr-3 group-hover:scale-110 transition-transform" />
+                Follow {instagramHandle}
+                <ExternalLink className="h-4 w-4 ml-3 opacity-70" />
+              </div>
+            </Button>
+            
+            <p className="text-gray-400 text-sm max-w-md mx-auto leading-relaxed">
+              Stay connected with the latest updates, events, and behind-the-scenes content from DC's premier cocktail lounge
+            </p>
+          </div>
+        </div>
       </div>
     </section>
   );
