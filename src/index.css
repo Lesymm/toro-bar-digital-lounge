@@ -118,11 +118,11 @@ All colors MUST be HSL. Blue, black, grey palette with luxury touches.
 
 @layer components {
   .hero-text {
-    @apply text-6xl md:text-8xl font-bold font-serif bg-gradient-to-r from-white via-blue-200 to-blue-400 bg-clip-text text-transparent;
+    @apply text-6xl md:text-8xl font-bold font-playfair bg-gradient-to-r from-white via-blue-200 to-blue-400 bg-clip-text text-transparent;
   }
   
   .section-title {
-    @apply text-4xl md:text-5xl font-bold font-serif text-center mb-16 bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent;
+    @apply text-4xl md:text-5xl font-bold font-playfair text-center mb-16 bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent;
   }
   
   .glow-effect {

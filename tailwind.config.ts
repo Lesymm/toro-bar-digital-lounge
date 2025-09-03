@@ -19,8 +19,8 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				'sans': ['Poppins', 'system-ui', 'sans-serif'],
-				'serif': ['Crimson Pro', 'serif'],
+				'sans': ['Inter', 'system-ui', 'sans-serif'],
+				'playfair': ['Playfair Display', 'serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
