@@ -6,61 +6,60 @@ import { GallerySection } from "@/components/ui/gallery-section";
 import { InstagramSection } from "@/components/ui/instagram-section";
 import { ContactSection } from "@/components/ui/contact-section";
 import { Footer } from "@/components/ui/footer";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const Index = () => {
-  const [currentTab, setCurrentTab] = useState("menu");
+  const [currentPage, setCurrentPage] = useState("home");
 
   const handlePageChange = (page: string) => {
+    setCurrentPage(page);
+    
+    // Smooth scroll to sections
     if (page === "home") {
-      // Scroll to top for home
       window.scrollTo({ top: 0, behavior: "smooth" });
     } else {
-      // Switch to the corresponding tab
-      setCurrentTab(page);
+      const element = document.getElementById(page);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
     }
   };
 
   const handleBookEvent = () => {
-    setCurrentTab("contact");
+    setCurrentPage("contact");
+    const element = document.getElementById("contact");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   return (
     <div className="min-h-screen bg-black">
-      <Navigation currentPage={currentTab} onPageChange={handlePageChange} />
+      <Navigation currentPage={currentPage} onPageChange={handlePageChange} />
       
       <main>
         {/* Hero Section */}
-        <section>
+        <section id="home">
           <HeroSection onBookEvent={handleBookEvent} />
         </section>
 
-        {/* Tabbed Content */}
-        <section className="container mx-auto px-4 py-12">
-          <Tabs value={currentTab} onValueChange={setCurrentTab} className="w-full">
-            <TabsList className="grid w-full grid-cols-4 mb-12 h-14">
-              <TabsTrigger value="menu" className="text-base font-semibold">🍽️ Menu</TabsTrigger>
-              <TabsTrigger value="gallery" className="text-base font-semibold">📸 Gallery</TabsTrigger>
-              <TabsTrigger value="instagram" className="text-base font-semibold">📱 Social</TabsTrigger>
-              <TabsTrigger value="contact" className="text-base font-semibold">📞 Contact</TabsTrigger>
-            </TabsList>
-            
-            <TabsContent value="menu">
-              <MenuSection />
-            </TabsContent>
-            
-            <TabsContent value="gallery">
-              <GallerySection />
-            </TabsContent>
-            
-            <TabsContent value="instagram">
-              <InstagramSection />
-            </TabsContent>
-            
-            <TabsContent value="contact">
-              <ContactSection />
-            </TabsContent>
-          </Tabs>
+        {/* Menu Section */}
+        <section id="menu">
+          <MenuSection />
+        </section>
+
+        {/* Gallery Section */}
+        <section id="gallery">
+          <GallerySection />
+        </section>
+
+        {/* Instagram Section */}
+        <section id="instagram">
+          <InstagramSection />
+        </section>
+
+        {/* Contact Section */}
+        <section id="contact">
+          <ContactSection />
         </section>
       </main>
 
