@@ -31,7 +31,7 @@ export const HeroSection = ({ onBookEvent }: HeroSectionProps) => {
         </h1>
         
         <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed">
-          DC's Premier Cocktail Lounge & Billiards Experience
+          DC's Favorite Billiard's Hall 🎱
         </p>
         
         <p className="text-lg text-gray-400 mb-12 max-w-xl mx-auto">
