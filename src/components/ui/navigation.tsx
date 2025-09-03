@@ -14,6 +14,7 @@ export const Navigation = ({ currentPage, onPageChange }: NavigationProps) => {
     { id: "home", label: "Home" },
     { id: "menu", label: "Menu" },
     { id: "gallery", label: "Gallery" },
+    { id: "instagram", label: "Instagram" },
     { id: "contact", label: "Contact" }
   ];
 

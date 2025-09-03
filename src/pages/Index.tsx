@@ -11,13 +11,23 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 const Index = () => {
   const [currentTab, setCurrentTab] = useState("menu");
 
+  const handlePageChange = (page: string) => {
+    if (page === "home") {
+      // Scroll to top for home
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      // Switch to the corresponding tab
+      setCurrentTab(page);
+    }
+  };
+
   const handleBookEvent = () => {
     setCurrentTab("contact");
   };
 
   return (
     <div className="min-h-screen bg-black">
-      <Navigation currentPage="home" onPageChange={() => {}} />
+      <Navigation currentPage={currentTab} onPageChange={handlePageChange} />
       
       <main>
         {/* Hero Section */}
