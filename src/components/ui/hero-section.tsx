@@ -27,7 +27,7 @@ export const HeroSection = ({ onBookEvent }: HeroSectionProps) => {
         </div>
         
         <h1 className="hero-text mb-6">
-          toro bar
+          Toro bar
         </h1>
         
         <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed">
