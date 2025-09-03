@@ -12,6 +12,7 @@ export const Navigation = ({ currentPage, onPageChange }: NavigationProps) => {
 
   const navItems = [
     { id: "home", label: "Home" },
+    { id: "about", label: "About" },
     { id: "menu", label: "Menu" },
     { id: "gallery", label: "Gallery" },
     { id: "contact", label: "Contact" }

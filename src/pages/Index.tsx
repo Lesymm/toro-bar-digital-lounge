@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Navigation } from "@/components/ui/navigation";
 import { HeroSection } from "@/components/ui/hero-section";
+import { AboutSection } from "@/components/ui/about-section";
 import { MenuSection } from "@/components/ui/menu-section";
 import { GallerySection } from "@/components/ui/gallery-section";
 import { InstagramSection } from "@/components/ui/instagram-section";
@@ -40,6 +41,11 @@ const Index = () => {
         {/* Hero Section */}
         <section id="home">
           <HeroSection onBookEvent={handleBookEvent} />
+        </section>
+
+        {/* About Section */}
+        <section id="about">
+          <AboutSection />
         </section>
 
         {/* Menu Section */}
