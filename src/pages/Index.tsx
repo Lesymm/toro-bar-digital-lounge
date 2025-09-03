@@ -36,13 +36,13 @@ const Index = () => {
         </section>
 
         {/* Tabbed Content */}
-        <section className="container mx-auto px-4 py-8">
+        <section className="container mx-auto px-4 py-12">
           <Tabs value={currentTab} onValueChange={setCurrentTab} className="w-full">
-            <TabsList className="grid w-full grid-cols-4 mb-8">
-              <TabsTrigger value="menu">Menu</TabsTrigger>
-              <TabsTrigger value="gallery">Gallery</TabsTrigger>
-              <TabsTrigger value="instagram">Instagram</TabsTrigger>
-              <TabsTrigger value="contact">Contact</TabsTrigger>
+            <TabsList className="grid w-full grid-cols-4 mb-12 h-14">
+              <TabsTrigger value="menu" className="text-base font-semibold">🍽️ Menu</TabsTrigger>
+              <TabsTrigger value="gallery" className="text-base font-semibold">📸 Gallery</TabsTrigger>
+              <TabsTrigger value="instagram" className="text-base font-semibold">📱 Social</TabsTrigger>
+              <TabsTrigger value="contact" className="text-base font-semibold">📞 Contact</TabsTrigger>
             </TabsList>
             
             <TabsContent value="menu">
