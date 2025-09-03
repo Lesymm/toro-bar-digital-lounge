@@ -19,8 +19,8 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				'sans': ['Source Sans Pro', 'system-ui', 'sans-serif'],
-				'work': ['Work Sans', 'sans-serif'],
+				'sans': ['Open Sans', 'system-ui', 'sans-serif'],
+				'nunito': ['Nunito', 'sans-serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
