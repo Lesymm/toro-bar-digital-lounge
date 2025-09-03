@@ -4,40 +4,40 @@ import { Download } from "lucide-react";
 
 const featuredDrinks = [
   {
-    name: "Toro Signature",
-    description: "Premium vodka, blue curaçao, fresh lime, and a splash of champagne",
-    price: "$16",
+    name: "HIBISCUS MARGARITA",
+    description: "a floral, tangy twist on the classic margarita made with hibiscus puree",
+    price: "$13",
     category: "Signature"
   },
   {
-    name: "Golden Bull",
-    description: "Aged bourbon, honey syrup, fresh lemon, and aromatic bitters",
-    price: "$14",
-    category: "Whiskey"
-  },
-  {
-    name: "Blue Steel",
-    description: "Gin, elderflower, fresh cucumber, and tonic with blue garnish",
-    price: "$13",
-    category: "Gin"
-  },
-  {
-    name: "Smoke & Mirrors",
-    description: "Mezcal, lime, agave, and smoked paprika rim",
-    price: "$15",
-    category: "Mezcal"
-  },
-  {
-    name: "Pool Hall Punch",
-    description: "Rum blend, tropical fruits, and blue-tinted ice",
+    name: "MISS MIAMI",
+    description: "take a trip to south beach with our sweet & zesty pink lemonade vodka cocktail",
     price: "$12",
-    category: "Rum"
+    category: "Vodka"
   },
   {
-    name: "Night Shift",
-    description: "Espresso martini with premium vodka and coffee liqueur",
+    name: "THE BAD BUNNY",
+    description: "a bold mix of vodka, rum, tequila & blue curaçao- smooth, strong & not for the weak!",
     price: "$14",
-    category: "Coffee"
+    category: "Strong"
+  },
+  {
+    name: "PINEAPPLE EXPRESS",
+    description: "buchanans pineapple meets tropical paradise",
+    price: "$14",
+    category: "Tropical"
+  },
+  {
+    name: "TORO'S PRINCESS",
+    description: "a fruity blend of sweet and sparkling made with malibu & vodka perfectly fit for royalty",
+    price: "$14",
+    category: "Fruity"
+  },
+  {
+    name: "LEO'S MICHI",
+    description: "the ultimate spicy refresher crafted by Leo himself- made with your choice of beer, freshly squeezed lime & a dash of heat for a vibrant fizzy ride",
+    price: "$13",
+    category: "Spicy"
   }
 ];
 
