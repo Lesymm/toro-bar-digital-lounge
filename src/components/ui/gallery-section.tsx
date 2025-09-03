@@ -6,38 +6,17 @@ const galleryImages = [
   {
     src: barInterior,
     alt: "Toro Bar Interior - Main Bar Area",
-    title: "Main Bar",
-    size: "large"
-  },
-  {
-    src: heroImage,
-    alt: "Premium Cocktails at Toro Bar",
-    title: "Signature Cocktails",
-    size: "medium"
+    title: "Main Bar"
   },
   {
     src: poolTable,
     alt: "Premium Billiards Table",
-    title: "Pool Table",
-    size: "medium"
+    title: "Pool Table"
   },
   {
-    src: "/lovable-uploads/2efa85dc-d3a6-4021-8b67-d0eecf003a94.png",
-    alt: "Toro Bar Atmosphere",
-    title: "Bar Atmosphere",
-    size: "small"
-  },
-  {
-    src: "/lovable-uploads/3d944f15-5fdd-4b76-9f23-a394a0396708.png",
-    alt: "Toro Bar Experience",
-    title: "Bar Experience",
-    size: "small"
-  },
-  {
-    src: "/lovable-uploads/ffe4fd15-b35c-47bc-b1f5-cf8f6681bf7b.png",
-    alt: "Toro Bar Interior View",
-    title: "Interior Views",
-    size: "medium"
+    src: heroImage,
+    alt: "Premium Cocktails",
+    title: "Signature Cocktails"
   }
 ];
 
@@ -47,32 +26,27 @@ export const GallerySection = () => {
       <div className="container mx-auto px-4">
         <h2 className="section-title">Experience Toro Bar</h2>
         
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {galleryImages.map((image, index) => (
             <div 
               key={index} 
-              className={`group relative overflow-hidden rounded-xl bg-gray-900 hover:scale-[1.02] transition-all duration-500 shadow-lg hover:shadow-2xl hover:shadow-toro-primary/20 ${
-                image.size === 'large' ? 'col-span-2 row-span-2 aspect-[4/3]' : 
-                image.size === 'medium' ? 'col-span-2 md:col-span-1 aspect-[4/3]' : 
-                'aspect-square'
-              }`}
+              className="group relative overflow-hidden rounded-lg bg-gray-900 aspect-[4/3] hover:scale-105 transition-transform duration-500"
             >
               <img
                 src={image.src}
                 alt={image.alt}
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-400">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="absolute bottom-4 left-4 right-4">
-                  <h3 className="text-white font-futura font-bold text-lg mb-1 italic">
+                  <h3 className="text-white font-semibold text-lg mb-1">
                     {image.title}
                   </h3>
-                  <p className="text-toro-accent text-sm">
+                  <p className="text-gray-300 text-sm">
                     {image.alt}
                   </p>
                 </div>
               </div>
-              <div className="absolute inset-0 border border-toro-primary/20 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </div>
           ))}
         </div>
