@@ -20,7 +20,7 @@ export default {
 		extend: {
 			fontFamily: {
 				'sans': ['Lato', 'system-ui', 'sans-serif'],
-				'montserrat': ['Montserrat', 'sans-serif'],
+				'oswald': ['Oswald', 'sans-serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',

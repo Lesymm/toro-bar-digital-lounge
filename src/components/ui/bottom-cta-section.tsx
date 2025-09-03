@@ -8,7 +8,7 @@ export const BottomCtaSection = ({ onBookEvent }: BottomCtaSectionProps) => {
   return (
     <section className="py-20 bg-gradient-to-r from-gray-900 to-black">
       <div className="container mx-auto px-4 text-center">
-        <h2 className="text-4xl md:text-5xl font-bold font-montserrat text-white mb-6">
+        <h2 className="text-4xl md:text-5xl font-bold font-oswald uppercase text-white mb-6">
           Ready to Experience Toro Bar?
         </h2>
         <p className="text-xl text-gray-300 mb-12 max-w-2xl mx-auto">
