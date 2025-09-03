@@ -29,7 +29,7 @@ export const AboutSection = () => {
           
           {/* Team Photo */}
           <div className="mt-16">
-            <h3 className="text-2xl font-bold font-futura text-white mb-8">Meet the Team</h3>
+            <h3 className="text-2xl font-bold font-futura italic text-white mb-8">Meet the Team</h3>
             <div className="relative rounded-2xl overflow-hidden shadow-luxury">
               <img 
                 src="/lovable-uploads/ffe4fd15-b35c-47bc-b1f5-cf8f6681bf7b.png"

@@ -20,7 +20,7 @@ export default {
 		extend: {
 			fontFamily: {
 				'sans': ['Inter', 'system-ui', 'sans-serif'],
-				'futura': ['Rajdhani', 'sans-serif'],
+				'futura': ['Exo 2', 'sans-serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
