@@ -19,8 +19,8 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				'sans': ['Open Sans', 'system-ui', 'sans-serif'],
-				'nunito': ['Nunito', 'sans-serif'],
+				'sans': ['Lato', 'system-ui', 'sans-serif'],
+				'montserrat': ['Montserrat', 'sans-serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
