@@ -6,60 +6,51 @@ import { GallerySection } from "@/components/ui/gallery-section";
 import { InstagramSection } from "@/components/ui/instagram-section";
 import { ContactSection } from "@/components/ui/contact-section";
 import { Footer } from "@/components/ui/footer";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const Index = () => {
-  const [currentPage, setCurrentPage] = useState("home");
-
-  const handlePageChange = (page: string) => {
-    setCurrentPage(page);
-    
-    // Smooth scroll to sections
-    if (page === "home") {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    } else {
-      const element = document.getElementById(page);
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
-      }
-    }
-  };
+  const [currentTab, setCurrentTab] = useState("menu");
 
   const handleBookEvent = () => {
-    setCurrentPage("contact");
-    const element = document.getElementById("contact");
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
+    setCurrentTab("contact");
   };
 
   return (
     <div className="min-h-screen bg-black">
-      <Navigation currentPage={currentPage} onPageChange={handlePageChange} />
+      <Navigation currentPage="home" onPageChange={() => {}} />
       
       <main>
         {/* Hero Section */}
-        <section id="home">
+        <section>
           <HeroSection onBookEvent={handleBookEvent} />
         </section>
 
-        {/* Menu Section */}
-        <section id="menu">
-          <MenuSection />
-        </section>
-
-        {/* Gallery Section */}
-        <section id="gallery">
-          <GallerySection />
-        </section>
-
-        {/* Instagram Section */}
-        <section id="instagram">
-          <InstagramSection />
-        </section>
-
-        {/* Contact Section */}
-        <section id="contact">
-          <ContactSection />
+        {/* Tabbed Content */}
+        <section className="container mx-auto px-4 py-8">
+          <Tabs value={currentTab} onValueChange={setCurrentTab} className="w-full">
+            <TabsList className="grid w-full grid-cols-4 mb-8">
+              <TabsTrigger value="menu">Menu</TabsTrigger>
+              <TabsTrigger value="gallery">Gallery</TabsTrigger>
+              <TabsTrigger value="instagram">Instagram</TabsTrigger>
+              <TabsTrigger value="contact">Contact</TabsTrigger>
+            </TabsList>
+            
+            <TabsContent value="menu">
+              <MenuSection />
+            </TabsContent>
+            
+            <TabsContent value="gallery">
+              <GallerySection />
+            </TabsContent>
+            
+            <TabsContent value="instagram">
+              <InstagramSection />
+            </TabsContent>
+            
+            <TabsContent value="contact">
+              <ContactSection />
+            </TabsContent>
+          </Tabs>
         </section>
       </main>
 
