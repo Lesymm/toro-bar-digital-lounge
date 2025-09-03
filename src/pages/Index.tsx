@@ -6,6 +6,7 @@ import { MenuSection } from "@/components/ui/menu-section";
 import { GallerySection } from "@/components/ui/gallery-section";
 import { InstagramSection } from "@/components/ui/instagram-section";
 import { ContactSection } from "@/components/ui/contact-section";
+import { BottomCtaSection } from "@/components/ui/bottom-cta-section";
 import { Footer } from "@/components/ui/footer";
 
 const Index = () => {
@@ -67,6 +68,9 @@ const Index = () => {
         <section id="contact">
           <ContactSection />
         </section>
+
+        {/* Bottom CTA Section */}
+        <BottomCtaSection onBookEvent={handleBookEvent} />
       </main>
 
       <Footer />
