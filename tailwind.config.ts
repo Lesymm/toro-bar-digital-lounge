@@ -19,8 +19,8 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				'sans': ['Lato', 'system-ui', 'sans-serif'],
-				'oswald': ['Oswald', 'sans-serif'],
+				'sans': ['Inter', 'system-ui', 'sans-serif'],
+				'futura': ['Rajdhani', 'sans-serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
