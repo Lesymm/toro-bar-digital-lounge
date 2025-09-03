@@ -19,8 +19,8 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				'sans': ['Roboto', 'system-ui', 'sans-serif'],
-				'poppins': ['Poppins', 'sans-serif'],
+				'sans': ['Source Sans Pro', 'system-ui', 'sans-serif'],
+				'work': ['Work Sans', 'sans-serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
