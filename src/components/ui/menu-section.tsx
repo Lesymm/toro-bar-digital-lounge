@@ -4,37 +4,37 @@ import { Download } from "lucide-react";
 
 const featuredDrinks = [
   {
-    name: "HIBISCUS MARGARITA",
+    name: "Hibiscus Margarita",
     description: "A floral, tangy twist on the classic margarita made with hibiscus puree",
     price: "$13",
     category: "Signature"
   },
   {
-    name: "MISS MIAMI",
+    name: "Miss Miami",
     description: "Take a trip to south beach with our sweet & zesty pink lemonade vodka cocktail",
     price: "$12",
     category: "Vodka"
   },
   {
-    name: "THE BAD BUNNY",
+    name: "The Bad Bunny",
     description: "A bold mix of vodka, rum, tequila & blue curaçao- smooth, strong & not for the weak!",
     price: "$14",
     category: "Strong"
   },
   {
-    name: "PINEAPPLE EXPRESS",
+    name: "Pineapple Express",
     description: "Buchanans pineapple meets tropical paradise",
     price: "$14",
     category: "Tropical"
   },
   {
-    name: "TORO'S PRINCESS",
+    name: "Toro's Princess",
     description: "A fruity blend of sweet and sparkling made with malibu & vodka perfectly fit for royalty",
     price: "$14",
     category: "Fruity"
   },
   {
-    name: "LEO'S MICHI",
+    name: "Leo's Michi",
     description: "The ultimate spicy refresher crafted by Leo himself- made with your choice of beer, freshly squeezed lime & a dash of heat for a vibrant fizzy ride",
     price: "$13",
     category: "Spicy"
