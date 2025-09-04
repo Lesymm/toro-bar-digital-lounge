@@ -1,8 +1,33 @@
+import { Card, CardContent } from "./card";
 import { Button } from "./button";
-import { Instagram, ExternalLink } from "lucide-react";
+import { Star, ExternalLink, Instagram } from "lucide-react";
 import { useEffect } from "react";
 
-export const InstagramSection = () => {
+const reviews = [
+  {
+    name: "Jeffrey Diaz",
+    rating: 5,
+    timeAgo: "4 months ago",
+    text: "For sure best michelada I've had in the city in a while! Gabby was my bartender and absolutely crushed that drink while handling a full bar! Will def be back again",
+    categories: ["Food: 5/5", "Service: 5/5", "Atmosphere: 5/5"]
+  },
+  {
+    name: "John Johnson",
+    rating: 5,
+    timeAgo: "a month ago",
+    text: "Hookah is like that. The atmosphere and music caters to all crowds... definitely worth the drive to NW and different from the regular spots. Come through we got you. I'm here even when I'm not working lol!!! Security is legit no need to worry about riff raff #wegotyou",
+    categories: ["Service: 5/5", "Atmosphere: 5/5"]
+  },
+  {
+    name: "Ronak Patel",
+    rating: 5,
+    timeAgo: "2 years ago",
+    text: "Best place to be any time of the day. Free pool on Tuesday nights and decent drink prices. Games are $1 until night ($2 after that). There's usually also a DJ night and the music adds to the atmosphere. Great place to be. Not to mention one of the best bartenders I've met — Nancy! Not much competition in pool but great conversationalist.",
+    categories: ["Service: 5/5", "Atmosphere: 5/5"]
+  }
+];
+
+export const SocialProofSection = () => {
   const instagramHandle = "@torobar14th_st";
   const instagramUrl = "https://www.instagram.com/torobar14th_st/";
 
@@ -27,29 +52,114 @@ export const InstagramSection = () => {
   `;
 
   return (
-    <section className="py-16 bg-gradient-to-b from-gray-900 to-black">
-      <div className="container mx-auto px-4 text-center">
-        <div className="flex items-center justify-center gap-3 mb-8">
-          <Instagram className="h-6 w-6 text-primary" />
-          <h2 className="text-3xl md:text-4xl font-bold text-white">
-            Latest from Instagram
-          </h2>
+    <section className="py-20 bg-gradient-to-b from-gray-900 to-black">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-16">
+          <h2 className="section-title">Social Proof</h2>
+          <p className="text-gray-400 text-lg max-w-3xl mx-auto">
+            See what our customers are saying and follow our latest updates
+          </p>
         </div>
-        
-        {/* Instagram Embed */}
-        <div 
-          className="max-w-lg mx-auto mb-8"
-          dangerouslySetInnerHTML={{ __html: embedCode }}
-        />
 
-        <Button 
-          onClick={() => window.open(instagramUrl, '_blank')}
-          className="luxury-button text-base px-6 py-2 group"
-        >
-          <Instagram className="h-4 w-4 mr-2" />
-          Follow {instagramHandle}
-          <ExternalLink className="h-3 w-3 ml-2 opacity-70" />
-        </Button>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 max-w-7xl mx-auto">
+          {/* Google Reviews Section */}
+          <div className="space-y-8">
+            <div className="text-center lg:text-left">
+              <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">Customer Reviews</h3>
+              <div className="flex items-center justify-center lg:justify-start gap-2 mb-6">
+                <div className="flex">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-6 h-6 fill-yellow-400 text-yellow-400" />
+                  ))}
+                </div>
+                <span className="text-white font-semibold text-lg">4.9/5</span>
+                <span className="text-gray-400">• 256 Google reviews</span>
+              </div>
+            </div>
+            
+            <div className="space-y-6">
+              {reviews.map((review, index) => (
+                <Card key={index} className="cocktail-card animate-slide-up">
+                  <CardContent className="p-6">
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center">
+                        <span className="text-white font-bold text-lg">
+                          {review.name.charAt(0)}
+                        </span>
+                      </div>
+                      <div>
+                        <h4 className="text-white font-semibold">{review.name}</h4>
+                        <div className="flex items-center gap-2">
+                          <div className="flex">
+                            {[...Array(review.rating)].map((_, i) => (
+                              <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                            ))}
+                          </div>
+                          <span className="text-gray-400 text-sm">{review.timeAgo}</span>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <p className="text-gray-300 leading-relaxed mb-4">
+                      "{review.text}"
+                    </p>
+                    
+                    <div className="flex flex-wrap gap-2">
+                      {review.categories.map((category, i) => (
+                        <span key={i} className="inline-block px-3 py-1 bg-blue-600/20 text-blue-400 text-xs font-medium rounded-full">
+                          {category}
+                        </span>
+                      ))}
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+
+            <div className="text-center lg:text-left">
+              <Button 
+                className="luxury-button"
+                asChild
+              >
+                <a 
+                  href="https://www.google.com/search?q=torobar+reveiws+dc&sca_esv=1e116d9a69546cc9&ei=Ixq5aN20H-Kywt0PzPH_6A8&ved=0ahUKEwid0uH4pr6PAxVimbAFHcz4H_0Q4dUDCBA&uact=5&oq=torobar+reveiws+dc&gs_lp=Egxnd3Mtd2l6LXNlcnAiEnRvcm9iYXIgcmV2ZWl3cyBkYzIHECEYoAEYCjIHECEYoAEYCjIHECEYoAEYCjIHECEYoAEYCjIHECEYoAEYCjIFECEYqwIyBRAhGKsCSM4DUKkBWN4CcAF4AZABAJgBaaABtAKqAQMxLjK4AQPIAQD4AQGYAgSgAsQCwgIKEAAYsAMY1gQYR8ICDRAAGLADGNYEGEcYyQPCAg4QABiABBiwAxiSAxiKBcICDRAAGIAEGLADGEMYigXCAgYQABgWGB7CAggQABgWGAoYHsICCBAAGAgYDRgewgILEAAYgAQYhgMYigXCAgUQABjvBcICCBAAGIAEGKIEmAMA4gMFEgExIECIBgGQBgqSBwMxLjOgB5MUsgcDMC4zuAfAAsIHBTAuMy4xyAcL&sclient=gws-wiz-serp#lrd=0x89b7c9c9eb31f69d:0xebfb790199902506,1,,,,"
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  <ExternalLink className="h-4 w-4 mr-2" />
+                  Read All Google Reviews
+                </a>
+              </Button>
+            </div>
+          </div>
+
+          {/* Instagram Section */}
+          <div className="flex flex-col items-center justify-center space-y-8">
+            <div className="text-center">
+              <div className="flex items-center justify-center gap-3 mb-4">
+                <Instagram className="h-6 w-6 text-primary" />
+                <h3 className="text-2xl md:text-3xl font-bold text-white">
+                  Latest from Instagram
+                </h3>
+              </div>
+            </div>
+            
+            {/* Instagram Embed */}
+            <div 
+              className="max-w-lg mx-auto"
+              dangerouslySetInnerHTML={{ __html: embedCode }}
+            />
+
+            <Button 
+              onClick={() => window.open(instagramUrl, '_blank')}
+              className="luxury-button text-base px-6 py-2 group"
+            >
+              <Instagram className="h-4 w-4 mr-2" />
+              Follow {instagramHandle}
+              <ExternalLink className="h-3 w-3 ml-2 opacity-70" />
+            </Button>
+          </div>
+        </div>
       </div>
     </section>
   );

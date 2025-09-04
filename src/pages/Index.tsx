@@ -4,9 +4,7 @@ import { HeroSection } from "@/components/ui/hero-section";
 import { AboutSection } from "@/components/ui/about-section";
 import { StaffHighlights } from "@/components/ui/staff-highlights";
 import { MenuSection } from "@/components/ui/menu-section";
-import { GoogleReviews } from "@/components/ui/google-reviews";
-
-import { InstagramSection } from "@/components/ui/instagram-section";
+import { SocialProofSection } from "@/components/ui/social-proof-section";
 import { ContactSection } from "@/components/ui/contact-section";
 import { BottomCtaSection } from "@/components/ui/bottom-cta-section";
 import { Footer } from "@/components/ui/footer";
@@ -61,13 +59,9 @@ const Index = () => {
           <MenuSection />
         </section>
 
-        {/* Google Reviews */}
-        <GoogleReviews />
-
-
-        {/* Instagram Section */}
-        <section id="instagram">
-          <InstagramSection />
+        {/* Social Proof Section - Reviews & Instagram */}
+        <section id="reviews">
+          <SocialProofSection />
         </section>
 
         {/* Contact Section */}
