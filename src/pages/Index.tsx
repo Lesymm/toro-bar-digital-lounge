@@ -51,8 +51,10 @@ const Index = () => {
           <AboutSection />
         </section>
 
-        {/* Staff Highlights */}
-        <StaffHighlights />
+        {/* Gallery - Staff Highlights */}
+        <section id="gallery">
+          <StaffHighlights />
+        </section>
 
         {/* Menu Section */}
         <section id="menu">
