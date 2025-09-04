@@ -1,4 +1,5 @@
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "./carousel";
+import Autoplay from "embla-carousel-autoplay";
 
 const galleryImages = [
   {
@@ -50,7 +51,14 @@ export const StaffHighlights = () => {
         <h2 className="section-title mb-8">The Toro Bar Experience</h2>
         
         <div className="max-w-4xl mx-auto">
-          <Carousel className="w-full">
+          <Carousel 
+            className="w-full"
+            plugins={[
+              Autoplay({
+                delay: 3000,
+              }),
+            ]}
+          >
             <CarouselContent>
               {galleryImages.map((image, index) => (
                 <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
