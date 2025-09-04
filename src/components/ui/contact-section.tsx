@@ -14,13 +14,8 @@ export const ContactSection = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    eventType: "",
-    date: "",
-    guests: "",
-    hours: "",
-    privateEvent: "",
-    barOption: "",
-    message: ""
+    phone: "",
+    eventDetails: ""
   });
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -37,13 +32,8 @@ export const ContactSection = () => {
       const templateParams = {
         from_name: formData.name,
         reply_to: formData.email,
-        event_type: formData.eventType,
-        event_date: formData.date,
-        guest_count: formData.guests,
-        duration: formData.hours,
-        private_event: formData.privateEvent,
-        bar_option: formData.barOption,
-        message: formData.message || "No additional details provided."
+        phone: formData.phone,
+        event_details: formData.eventDetails || "No event details provided."
       };
       
       await emailjs.send(serviceID, templateID, templateParams, publicKey);
@@ -57,13 +47,8 @@ export const ContactSection = () => {
       setFormData({
         name: "",
         email: "",
-        eventType: "",
-        date: "",
-        guests: "",
-        hours: "",
-        privateEvent: "",
-        barOption: "",
-        message: ""
+        phone: "",
+        eventDetails: ""
       });
       
     } catch (error) {
@@ -98,118 +83,50 @@ export const ContactSection = () => {
             </CardHeader>
             <CardContent>
               <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div>
-                    <label className="text-white text-sm font-medium mb-2 block">Name *</label>
-                    <Input
-                      required
-                      value={formData.name}
-                      onChange={(e) => handleInputChange("name", e.target.value)}
-                      className="bg-gray-800 border-gray-600 text-white"
-                      placeholder="Your name"
-                    />
-                  </div>
-                  <div>
-                    <label className="text-white text-sm font-medium mb-2 block">Email *</label>
-                    <Input
-                      type="email"
-                      required
-                      value={formData.email}
-                      onChange={(e) => handleInputChange("email", e.target.value)}
-                      className="bg-gray-800 border-gray-600 text-white"
-                      placeholder="your@email.com"
-                    />
-                  </div>
-                </div>
-
                 <div>
-                  <label className="text-white text-sm font-medium mb-2 block">Event Type *</label>
-                  <Select onValueChange={(value) => handleInputChange("eventType", value)}>
-                    <SelectTrigger className="bg-gray-800 border-gray-600 text-white">
-                      <SelectValue placeholder="Select event type" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="birthday">Birthday Party</SelectItem>
-                      <SelectItem value="corporate">Corporate Event</SelectItem>
-                      <SelectItem value="bachelor">Bachelor/Bachelorette</SelectItem>
-                      <SelectItem value="anniversary">Anniversary</SelectItem>
-                      <SelectItem value="networking">Networking Event</SelectItem>
-                      <SelectItem value="other">Other</SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div>
-                    <label className="text-white text-sm font-medium mb-2 block">Event Date *</label>
-                    <Input
-                      type="date"
-                      required
-                      value={formData.date}
-                      onChange={(e) => handleInputChange("date", e.target.value)}
-                      className="bg-gray-800 border-gray-600 text-white"
-                    />
-                  </div>
-                  <div>
-                    <label className="text-white text-sm font-medium mb-2 block">Number of Guests *</label>
-                    <Input
-                      type="number"
-                      required
-                      value={formData.guests}
-                      onChange={(e) => handleInputChange("guests", e.target.value)}
-                      className="bg-gray-800 border-gray-600 text-white"
-                      placeholder="25"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label className="text-white text-sm font-medium mb-2 block">Duration (Hours) *</label>
+                  <label className="text-white text-sm font-medium mb-2 block">Name *</label>
                   <Input
-                    type="number"
                     required
-                    value={formData.hours}
-                    onChange={(e) => handleInputChange("hours", e.target.value)}
+                    value={formData.name}
+                    onChange={(e) => handleInputChange("name", e.target.value)}
                     className="bg-gray-800 border-gray-600 text-white"
-                    placeholder="3"
+                    placeholder="Your name"
                   />
                 </div>
 
                 <div>
-                  <label className="text-white text-sm font-medium mb-2 block">Event Type *</label>
-                  <Select onValueChange={(value) => handleInputChange("privateEvent", value)}>
-                    <SelectTrigger className="bg-gray-800 border-gray-600 text-white">
-                      <SelectValue placeholder="Private or Semi-Private?" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="private">Private Event (Entire Venue)</SelectItem>
-                      <SelectItem value="semi-private">Semi-Private (Section)</SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
-
-                <div>
-                  <label className="text-white text-sm font-medium mb-2 block">Bar Option *</label>
-                  <Select onValueChange={(value) => handleInputChange("barOption", value)}>
-                    <SelectTrigger className="bg-gray-800 border-gray-600 text-white">
-                      <SelectValue placeholder="Select bar option" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="open-bar">Open Bar Package</SelectItem>
-                      <SelectItem value="pay-as-go">Pay-As-You-Go</SelectItem>
-                      <SelectItem value="discuss">Let's Discuss Options</SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
-
-                <div>
-                  <label className="text-white text-sm font-medium mb-2 block">Additional Details</label>
-                  <Textarea
-                    value={formData.message}
-                    onChange={(e) => handleInputChange("message", e.target.value)}
+                  <label className="text-white text-sm font-medium mb-2 block">Email *</label>
+                  <Input
+                    type="email"
+                    required
+                    value={formData.email}
+                    onChange={(e) => handleInputChange("email", e.target.value)}
                     className="bg-gray-800 border-gray-600 text-white"
-                    placeholder="Tell us more about your event, special requests, music preferences, etc."
-                    rows={4}
+                    placeholder="your@email.com"
+                  />
+                </div>
+
+                <div>
+                  <label className="text-white text-sm font-medium mb-2 block">Phone *</label>
+                  <Input
+                    type="tel"
+                    required
+                    value={formData.phone}
+                    onChange={(e) => handleInputChange("phone", e.target.value)}
+                    className="bg-gray-800 border-gray-600 text-white"
+                    placeholder="(555) 123-4567"
+                  />
+                </div>
+
+                <div>
+                  <label className="text-white text-sm font-medium mb-2 block">Event Details *</label>
+                  <Textarea
+                    required
+                    value={formData.eventDetails}
+                    onChange={(e) => handleInputChange("eventDetails", e.target.value)}
+                    className="bg-gray-800 border-gray-600 text-white"
+                    placeholder="Tell us about your event: type, date, number of guests, special requests, etc."
+                    rows={5}
                   />
                 </div>
 
@@ -281,6 +198,14 @@ export const ContactSection = () => {
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
+                <a 
+                  href="tel:202-723-2393"
+                  className="flex items-center space-x-2 text-gray-300 hover:text-blue-400 transition-colors"
+                >
+                  <Phone className="h-4 w-4" />
+                  <span>(202) 723-2393</span>
+                </a>
+                
                 <a 
                   href="mailto:torobardc@gmail.com"
                   className="flex items-center space-x-2 text-gray-300 hover:text-blue-400 transition-colors"
