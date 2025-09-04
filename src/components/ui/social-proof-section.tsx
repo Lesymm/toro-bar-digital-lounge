@@ -61,12 +61,12 @@ export const SocialProofSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-7xl mx-auto items-start">
           {/* Google Reviews Section */}
           <div className="space-y-8">
             <div className="text-center lg:text-left">
               <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">Customer Reviews</h3>
-              <div className="flex items-center justify-center lg:justify-start gap-2 mb-6">
+              <div className="flex items-center justify-center lg:justify-start gap-2 mb-8">
                 <div className="flex">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className="w-6 h-6 fill-yellow-400 text-yellow-400" />
@@ -77,36 +77,36 @@ export const SocialProofSection = () => {
               </div>
             </div>
             
-            <div className="space-y-6">
+            <div className="space-y-6 max-h-[600px] overflow-y-auto pr-2">
               {reviews.map((review, index) => (
                 <Card key={index} className="cocktail-card animate-slide-up">
-                  <CardContent className="p-6">
-                    <div className="flex items-center gap-3 mb-4">
-                      <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center">
-                        <span className="text-white font-bold text-lg">
+                  <CardContent className="p-5">
+                    <div className="flex items-center gap-3 mb-3">
+                      <div className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
+                        <span className="text-white font-bold text-sm">
                           {review.name.charAt(0)}
                         </span>
                       </div>
-                      <div>
-                        <h4 className="text-white font-semibold">{review.name}</h4>
+                      <div className="min-w-0">
+                        <h4 className="text-white font-semibold text-sm truncate">{review.name}</h4>
                         <div className="flex items-center gap-2">
                           <div className="flex">
                             {[...Array(review.rating)].map((_, i) => (
-                              <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                              <Star key={i} className="w-3 h-3 fill-yellow-400 text-yellow-400" />
                             ))}
                           </div>
-                          <span className="text-gray-400 text-sm">{review.timeAgo}</span>
+                          <span className="text-gray-400 text-xs">{review.timeAgo}</span>
                         </div>
                       </div>
                     </div>
                     
-                    <p className="text-gray-300 leading-relaxed mb-4">
+                    <p className="text-gray-300 leading-relaxed mb-3 text-sm line-clamp-4">
                       "{review.text}"
                     </p>
                     
-                    <div className="flex flex-wrap gap-2">
-                      {review.categories.map((category, i) => (
-                        <span key={i} className="inline-block px-3 py-1 bg-blue-600/20 text-blue-400 text-xs font-medium rounded-full">
+                    <div className="flex flex-wrap gap-1">
+                      {review.categories.slice(0, 2).map((category, i) => (
+                        <span key={i} className="inline-block px-2 py-1 bg-blue-600/20 text-blue-400 text-xs font-medium rounded-full">
                           {category}
                         </span>
                       ))}
@@ -118,7 +118,7 @@ export const SocialProofSection = () => {
 
             <div className="text-center lg:text-left">
               <Button 
-                className="luxury-button"
+                className="luxury-button w-full lg:w-auto"
                 asChild
               >
                 <a 
@@ -134,9 +134,9 @@ export const SocialProofSection = () => {
           </div>
 
           {/* Instagram Section */}
-          <div className="flex flex-col items-center justify-center space-y-8">
-            <div className="text-center">
-              <div className="flex items-center justify-center gap-3 mb-4">
+          <div className="flex flex-col space-y-8 h-full">
+            <div className="text-center lg:text-left">
+              <div className="flex items-center justify-center lg:justify-start gap-3 mb-8">
                 <Instagram className="h-6 w-6 text-primary" />
                 <h3 className="text-2xl md:text-3xl font-bold text-white">
                   Latest from Instagram
@@ -145,19 +145,23 @@ export const SocialProofSection = () => {
             </div>
             
             {/* Instagram Embed */}
-            <div 
-              className="max-w-lg mx-auto"
-              dangerouslySetInnerHTML={{ __html: embedCode }}
-            />
+            <div className="flex-1 flex items-center justify-center">
+              <div 
+                className="max-w-lg mx-auto w-full"
+                dangerouslySetInnerHTML={{ __html: embedCode }}
+              />
+            </div>
 
-            <Button 
-              onClick={() => window.open(instagramUrl, '_blank')}
-              className="luxury-button text-base px-6 py-2 group"
-            >
-              <Instagram className="h-4 w-4 mr-2" />
-              Follow {instagramHandle}
-              <ExternalLink className="h-3 w-3 ml-2 opacity-70" />
-            </Button>
+            <div className="text-center lg:text-left">
+              <Button 
+                onClick={() => window.open(instagramUrl, '_blank')}
+                className="luxury-button w-full lg:w-auto text-base px-6 py-2 group"
+              >
+                <Instagram className="h-4 w-4 mr-2" />
+                Follow {instagramHandle}
+                <ExternalLink className="h-3 w-3 ml-2 opacity-70" />
+              </Button>
+            </div>
           </div>
         </div>
       </div>
