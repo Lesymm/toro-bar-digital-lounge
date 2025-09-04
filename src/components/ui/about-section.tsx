@@ -8,7 +8,7 @@ export const AboutSection = () => {
           <div className="space-y-6 text-lg text-gray-300 leading-relaxed">
             <p>
               Welcome to Toro Bar, Washington, D.C.'s home for great drinks, good vibes, and billiards. 
-              Nestled in the heart of Columbia Heights, Toro Bar isn't just a bar — it's a community hub. 
+              Nestled in the heart of Columbia Heights, Toro Bar isn't just a bar, it's a community hub.
               With a full bar, pool tables, hookah, and a calendar packed with events, we bring people 
               together for nights full of connection, laughter, and friendly competition.
             </p>
