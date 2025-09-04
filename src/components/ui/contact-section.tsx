@@ -228,7 +228,7 @@ export const ContactSection = () => {
                       rel="noopener noreferrer"
                       className="flex items-center space-x-2 text-gray-300 hover:text-blue-400 transition-colors"
                     >
-                      <Star className="h-4 w-4" />
+                      <Facebook className="h-4 w-4" />
                       <span>Facebook</span>
                     </a>
                     <a 
@@ -238,7 +238,7 @@ export const ContactSection = () => {
                       className="flex items-center space-x-2 text-gray-300 hover:text-blue-400 transition-colors"
                     >
                       <Star className="h-4 w-4" />
-                      <span>Google</span>
+                      <span>Google Reviews</span>
                     </a>
                   </div>
                 </div>
