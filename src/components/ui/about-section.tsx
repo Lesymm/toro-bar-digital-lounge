@@ -26,19 +26,6 @@ export const AboutSection = () => {
               Toro is unmatched!
             </p>
           </div>
-          
-          {/* Team Photo */}
-          <div className="mt-16">
-            <h3 className="text-2xl font-bold font-futura italic text-white mb-8">Meet the Team</h3>
-            <div className="relative rounded-2xl overflow-hidden shadow-luxury">
-              <img 
-                src="/lovable-uploads/ffe4fd15-b35c-47bc-b1f5-cf8f6681bf7b.png"
-                alt="Toro Bar Team - Our dedicated staff ready to serve you"
-                className="w-full h-auto object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
-            </div>
-          </div>
         </div>
       </div>
     </section>
