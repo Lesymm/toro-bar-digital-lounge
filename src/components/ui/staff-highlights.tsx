@@ -2,44 +2,44 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 
 const galleryImages = [
   {
-    src: "/lovable-uploads/a25b1b70-fe19-4b00-ac63-386e893c69e6.png",
-    alt: "Pool table with 8 ball that sign at Toro Bar"
+    src: "/lovable-uploads/65360ee9-8467-438b-90d2-c4f93248eb19.png",
+    alt: "Pool table with 8 ball signage at Toro Bar"
   },
   {
-    src: "/lovable-uploads/102fbb6c-b245-4780-a907-5f922ee2db4d.png",
+    src: "/lovable-uploads/1ead8b1d-d3b5-4c2d-bdb8-ceba6f3660ab.png",
     alt: "Customer enjoying the Forever atmosphere at Toro Bar"
   },
   {
-    src: "/lovable-uploads/a7920441-26b4-4846-a00f-28bb6f3a45ff.png",
+    src: "/lovable-uploads/daa6479c-ff1b-4623-b5a5-3dc8d84bd430.png",
     alt: "Bartender crafting cocktails at Toro Bar"
   },
   {
-    src: "/lovable-uploads/1199b949-79a5-4132-8339-27bf45d3b278.png",
+    src: "/lovable-uploads/766c7af7-29bf-46f8-863b-6581c13d752f.png",
     alt: "Enjoying hookah at Toro Bar"
   },
   {
-    src: "/lovable-uploads/cb5ff290-114c-415c-8670-56f75f55c46a.png",
+    src: "/lovable-uploads/93a6a9ea-d565-41ca-8d4a-627d5819848e.png",
     alt: "Friends playing pool at Toro Bar"
   },
   {
-    src: "/lovable-uploads/1b91ad31-a9c8-4d33-84db-0ad58c9f84f4.png",
+    src: "/lovable-uploads/16a9abfd-7dba-4f7f-ac66-7f724f421fc6.png",
     alt: "Good vibes outside Toro Bar with Corona decorations"
   },
   {
-    src: "/lovable-uploads/58eb874a-21f6-42cf-a360-777374b09f86.png",
+    src: "/lovable-uploads/7ae60646-164e-4458-b4fd-ecb1f6a01e1a.png",
+    alt: "Friends celebrating at Toro Bar"
+  },
+  {
+    src: "/lovable-uploads/a4ad5754-53c3-4b66-8180-05ae1cfcad2a.png",
     alt: "Birthday celebration at Toro Bar"
   },
   {
-    src: "/lovable-uploads/c0e768b7-2a74-49ed-82cb-3fc5b64892f0.png",
+    src: "/lovable-uploads/4a7ab37f-8fee-45db-8525-dde07e026afc.png",
     alt: "Party atmosphere with confetti at Toro Bar"
   },
   {
-    src: "/lovable-uploads/5476af6f-f615-4592-8816-23547047cf2f.png",
+    src: "/lovable-uploads/5747ee7d-2f32-41b4-a6ac-5bfdf008a0ad.png",
     alt: "Fun times with props at Toro Bar"
-  },
-  {
-    src: "/lovable-uploads/5689b0f6-a0fe-48f3-b051-98d4a35adfbd.png",
-    alt: "Outside view of Toro Bar"
   }
 ];
 
