@@ -77,7 +77,7 @@ export const SocialProofSection = () => {
               </div>
             </div>
             
-            <div className="space-y-6 max-h-[600px] overflow-y-auto pr-2">
+            <div className="space-y-6">
               {reviews.map((review, index) => (
                 <Card key={index} className="cocktail-card animate-slide-up">
                   <CardContent className="p-5">
