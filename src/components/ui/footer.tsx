@@ -29,7 +29,7 @@ export const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center justify-center space-x-2 text-gray-400">
                 <MapPin className="h-4 w-4" />
-                <span>14th Street NW, Washington, DC</span>
+                <span>3708 14th St NW, Washington, DC 20010</span>
               </div>
               <div className="flex items-center justify-center space-x-2 text-gray-400">
                 <Mail className="h-4 w-4" />
@@ -39,7 +39,7 @@ export const Footer = () => {
               </div>
               <div className="flex items-center justify-center space-x-2 text-gray-400">
                 <Clock className="h-4 w-4" />
-                <span>Mon-Sat: 5PM-2AM, Sun: 6PM-11PM</span>
+                <span>Sun-Thu: 5PM-2AM, Fri-Sat: 5PM-3AM</span>
               </div>
             </div>
           </div>
