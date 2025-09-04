@@ -183,6 +183,12 @@ export const ContactSection = () => {
                   <span className="text-gray-400">Friday - Saturday</span>
                   <span className="text-white">5PM - 3AM</span>
                 </div>
+                <div className="border-t border-gray-700 mt-3 pt-3">
+                  <div className="flex justify-between">
+                    <span className="text-blue-400 font-medium">Happy Hour</span>
+                    <span className="text-blue-400 font-medium">5PM - 9PM Daily</span>
+                  </div>
+                </div>
               </CardContent>
             </Card>
 
