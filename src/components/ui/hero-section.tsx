@@ -1,5 +1,4 @@
 import { Button } from "./button";
-import heroImage from "@/assets/hero-cocktails.jpg";
 
 interface HeroSectionProps {
   onBookEvent: () => void;
@@ -11,7 +10,7 @@ export const HeroSection = ({ onBookEvent }: HeroSectionProps) => {
       {/* Background Image */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${heroImage})` }}
+        style={{ backgroundImage: `url(/lovable-uploads/8ab2489d-6518-46a8-9fb2-91393640c518.png)` }}
       >
         <div className="absolute inset-0 bg-black/60"></div>
       </div>
