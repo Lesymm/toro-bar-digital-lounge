@@ -38,8 +38,8 @@ export const GoogleReviews = () => {
                 <Star key={i} className="w-6 h-6 fill-yellow-400 text-yellow-400" />
               ))}
             </div>
-            <span className="text-white font-semibold text-lg">4.8/5</span>
-            <span className="text-gray-400">on Google Reviews</span>
+            <span className="text-white font-semibold text-lg">4.9/5</span>
+            <span className="text-gray-400">• 256 Google reviews</span>
           </div>
         </div>
         
