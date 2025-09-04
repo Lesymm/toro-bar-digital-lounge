@@ -55,9 +55,9 @@ export const SocialProofSection = () => {
     <section className="py-20 bg-gradient-to-b from-gray-900 to-black">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="section-title">Social Proof</h2>
+          <h2 className="section-title">What People Are Saying</h2>
           <p className="text-gray-400 text-lg max-w-3xl mx-auto">
-            See what our customers are saying and follow our latest updates
+            Hear from our amazing customers and stay connected with us on Instagram
           </p>
         </div>
 
