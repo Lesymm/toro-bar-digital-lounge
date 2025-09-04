@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Navigation } from "@/components/ui/navigation";
 import { HeroSection } from "@/components/ui/hero-section";
 import { AboutSection } from "@/components/ui/about-section";
-import { StaffHighlights } from "@/components/ui/staff-highlights";
 import { MenuSection } from "@/components/ui/menu-section";
 import { GoogleReviews } from "@/components/ui/google-reviews";
 import { GallerySection } from "@/components/ui/gallery-section";
@@ -50,9 +49,6 @@ const Index = () => {
         <section id="about">
           <AboutSection />
         </section>
-
-        {/* Staff Highlights */}
-        <StaffHighlights />
 
         {/* Menu Section */}
         <section id="menu">
