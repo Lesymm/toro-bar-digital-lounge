@@ -151,7 +151,7 @@ export const ContactSection = () => {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-300 mb-4">14th Street NW, Washington, DC</p>
+                <p className="text-gray-300 mb-4">3708 14th St NW, Washington, DC 20010</p>
                 <div className="bg-gray-800 rounded-lg overflow-hidden h-48">
                   <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3105.1524687084097!2d-77.0327999!3d38.9173744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7b7f8b1234567%3A0x1234567890abcdef!2s14th%20St%20NW%2C%20Washington%2C%20DC!5e0!3m2!1sen!2sus!4v1234567890123"
@@ -176,16 +176,12 @@ export const ContactSection = () => {
               </CardHeader>
               <CardContent className="space-y-2">
                 <div className="flex justify-between">
-                  <span className="text-gray-400">Monday - Wednesday</span>
-                  <span className="text-white">5PM - 12AM</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-gray-400">Thursday - Saturday</span>
+                  <span className="text-gray-400">Sunday - Thursday</span>
                   <span className="text-white">5PM - 2AM</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-gray-400">Sunday</span>
-                  <span className="text-white">6PM - 11PM</span>
+                  <span className="text-gray-400">Friday - Saturday</span>
+                  <span className="text-white">5PM - 3AM</span>
                 </div>
               </CardContent>
             </Card>

@@ -97,11 +97,11 @@ export const MenuSection = () => {
           <div className="space-y-4 sm:space-y-0 sm:space-x-4 sm:flex sm:justify-center">
             <div className="text-center">
               <h4 className="text-white font-semibold mb-2">Happy Hour</h4>
-              <p className="text-gray-400 text-sm">Monday - Friday | 5PM - 7PM</p>
+              <p className="text-gray-400 text-sm">Every Day | 5PM - 9PM</p>
             </div>
             <div className="text-center">
               <h4 className="text-white font-semibold mb-2">Late Night</h4>
-              <p className="text-gray-400 text-sm">Thursday - Saturday | Until 2AM</p>
+              <p className="text-gray-400 text-sm">Friday - Saturday | Until 3AM</p>
             </div>
           </div>
         </div>
