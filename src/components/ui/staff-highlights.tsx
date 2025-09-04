@@ -28,24 +28,27 @@ export const StaffHighlights = () => {
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {galleryImages.map((image, index) => (
-              <div key={index} className="relative group overflow-hidden rounded-lg shadow-2xl hover:shadow-3xl transition-all duration-500 hover:-translate-y-2 animate-float" style={{animationDelay: `${index * 0.2}s`}}>
+              <div key={index} className="relative group overflow-hidden rounded-lg shadow-2xl hover:shadow-3xl transition-all duration-500 hover:-translate-y-1">
                 <img 
                   src={image.src}
                   alt={image.alt}
                   className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent"></div>
                 
-                {/* Caption overlay */}
-                <div className="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
-                  <h3 className="text-xl font-bold mb-2 text-blue-400">{image.title}</h3>
-                  <p className="text-gray-300 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
-                    {image.description}
-                  </p>
+                {/* Caption overlay - centered and symmetrical */}
+                <div className="absolute inset-0 flex flex-col justify-center items-center text-center p-6 text-white">
+                  <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                    <h3 className="text-2xl font-bold mb-3 text-blue-400 tracking-wide">{image.title}</h3>
+                    <div className="w-16 h-0.5 bg-blue-400 mx-auto mb-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-200"></div>
+                    <p className="text-gray-300 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-300 text-lg font-light">
+                      {image.description}
+                    </p>
+                  </div>
                 </div>
                 
-                {/* Floating glow effect */}
-                <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-blue-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                {/* Subtle glow effect */}
+                <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-blue-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </div>
             ))}
           </div>
