@@ -64,9 +64,9 @@ export const SocialProofSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-7xl mx-auto items-start">
           {/* Google Reviews Section */}
           <div className="space-y-8">
-            <div className="text-center lg:text-left">
+            <div className="text-center">
               <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">Customer Reviews</h3>
-              <div className="flex items-center justify-center lg:justify-start gap-2 mb-8">
+              <div className="flex items-center justify-center gap-2 mb-8">
                 <div className="flex">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className="w-6 h-6 fill-yellow-400 text-yellow-400" />
