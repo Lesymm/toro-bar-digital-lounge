@@ -1,4 +1,4 @@
-import { MapPin, Mail, Clock, Instagram, Star } from "lucide-react";
+import { MapPin, Mail, Clock, Instagram, Star, Facebook } from "lucide-react";
 
 export const Footer = () => {
   return (
@@ -64,7 +64,7 @@ export const Footer = () => {
                   rel="noopener noreferrer"
                   className="flex items-center space-x-1 text-gray-400 hover:text-blue-400 transition-colors"
                 >
-                  <Star className="h-4 w-4" />
+                  <Facebook className="h-4 w-4" />
                   <span>Facebook</span>
                 </a>
                 <a 
@@ -74,7 +74,7 @@ export const Footer = () => {
                   className="flex items-center space-x-1 text-gray-400 hover:text-blue-400 transition-colors"
                 >
                   <Star className="h-4 w-4" />
-                  <span>Google</span>
+                  <span>Google Reviews</span>
                 </a>
               </div>
             </div>
