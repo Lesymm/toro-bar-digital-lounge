@@ -116,7 +116,7 @@ export const SocialProofSection = () => {
               ))}
             </div>
 
-            <div className="text-center lg:text-left">
+            <div className="text-center">
               <Button 
                 className="luxury-button w-full lg:w-auto"
                 asChild
