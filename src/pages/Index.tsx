@@ -6,6 +6,7 @@ import { StaffHighlights } from "@/components/ui/staff-highlights";
 import { MenuSection } from "@/components/ui/menu-section";
 import { GoogleReviews } from "@/components/ui/google-reviews";
 
+import { GallerySection } from "@/components/ui/gallery-section";
 import { InstagramSection } from "@/components/ui/instagram-section";
 import { ContactSection } from "@/components/ui/contact-section";
 import { BottomCtaSection } from "@/components/ui/bottom-cta-section";
@@ -62,6 +63,10 @@ const Index = () => {
         {/* Google Reviews */}
         <GoogleReviews />
 
+        {/* Gallery Section */}
+        <section id="gallery">
+          <GallerySection />
+        </section>
 
         {/* Instagram Section */}
         <section id="instagram">
