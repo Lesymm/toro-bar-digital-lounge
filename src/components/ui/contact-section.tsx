@@ -68,7 +68,7 @@ export const ContactSection = () => {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-b from-black to-gray-900">
+    <section className="py-20 bg-gradient-to-b from-[hsl(var(--section-contact-from))] to-[hsl(var(--section-contact-to))]">
       <div className="container mx-auto px-4">
         <h2 className="section-title">Contact & Events</h2>
         

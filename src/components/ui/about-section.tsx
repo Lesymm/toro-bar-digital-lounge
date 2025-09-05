@@ -1,6 +1,6 @@
 export const AboutSection = () => {
   return (
-    <section className="py-20 bg-gradient-to-b from-black to-gray-900">
+    <section className="py-20 bg-gradient-to-b from-[hsl(var(--section-about-from))] to-[hsl(var(--section-about-to))]">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="section-title">About Us</h2>

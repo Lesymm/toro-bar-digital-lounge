@@ -2,7 +2,7 @@ import { MapPin, Mail, Clock, Instagram, Star, Facebook } from "lucide-react";
 
 export const Footer = () => {
   return (
-    <footer className="bg-black border-t border-gray-800">
+    <footer className="bg-[hsl(var(--section-footer))] border-t border-gray-800">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Brand */}

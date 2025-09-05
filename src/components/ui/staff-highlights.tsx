@@ -21,7 +21,7 @@ const galleryImages = [
 
 export const StaffHighlights = () => {
   return (
-    <section className="py-12 bg-gradient-to-b from-black to-gray-900">
+    <section className="py-12 bg-gradient-to-b from-[hsl(var(--section-highlights-from))] to-[hsl(var(--section-highlights-to))]">
       <div className="container mx-auto px-4">
         <h2 className="section-title mb-8">The Toro Bar Experience</h2>
         

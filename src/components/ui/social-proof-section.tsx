@@ -52,7 +52,7 @@ export const SocialProofSection = () => {
   `;
 
   return (
-    <section className="py-20 bg-gradient-to-b from-gray-900 to-black">
+    <section className="py-20 bg-gradient-to-b from-[hsl(var(--section-social-from))] to-[hsl(var(--section-social-to))]">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="section-title">What People Are Saying</h2>
