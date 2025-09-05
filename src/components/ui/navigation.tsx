@@ -29,7 +29,7 @@ export const Navigation = ({ currentPage, onPageChange }: NavigationProps) => {
               alt="Toro Bar Logo" 
               className="h-10 w-10"
             />
-            <span className="text-2xl font-bold text-white">Toro bar</span>
+            <span className="text-2xl font-bold text-white">Toro Bar</span>
           </div>
 
           {/* Desktop Navigation */}

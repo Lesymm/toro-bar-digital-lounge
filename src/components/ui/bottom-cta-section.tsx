@@ -9,7 +9,7 @@ export const BottomCtaSection = ({ onBookEvent }: BottomCtaSectionProps) => {
     <section className="py-20 bg-gradient-to-r from-[hsl(var(--section-cta-from))] to-[hsl(var(--section-cta-to))]">
       <div className="container mx-auto px-4 text-center">
         <h2 className="text-4xl md:text-5xl font-bold font-futura italic text-white mb-6">
-          Ready to Experience Toro bar?
+          Ready to Experience Toro Bar?
         </h2>
         <p className="text-xl text-gray-300 mb-12 max-w-2xl mx-auto">
           Join us for an unforgettable night of premium cocktails, billiards, and great vibes in the heart of D.C.

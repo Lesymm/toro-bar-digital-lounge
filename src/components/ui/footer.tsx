@@ -13,7 +13,7 @@ export const Footer = () => {
                 alt="Toro Bar Logo" 
                 className="h-8 w-8"
               />
-              <span className="text-2xl font-bold text-white">Toro bar</span>
+              <span className="text-2xl font-bold text-white">Toro Bar</span>
             </div>
             <p className="text-gray-400 mb-4">
               DC's Premier Cocktail Lounge & Billiards Experience
