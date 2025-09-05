@@ -230,6 +230,8 @@ All colors MUST be HSL. Blue, black, grey palette with luxury touches.
 
   .parallax-bg {
     @apply absolute inset-0 will-change-transform;
+    transform: translateZ(0); /* Force hardware acceleration */
+    backface-visibility: hidden; /* Prevent flickering */
   }
 
   .animate-float {
