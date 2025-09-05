@@ -50,22 +50,22 @@ All colors MUST be HSL. Blue, black, grey palette with luxury touches.
     --toro-gold: 45 100% 70%;
     --toro-silver: 0 0% 75%;
     
-    /* Section Color Variations - Smooth flowing gradients */
-    --section-hero-from: 220 90% 3%;
-    --section-hero-to: 220 80% 8%;
-    --section-about-from: 220 70% 12%;
-    --section-about-to: 220 60% 20%;
-    --section-highlights-from: 220 85% 6%;
-    --section-highlights-to: 220 75% 14%;
-    --section-menu-from: 220 50% 25%;
-    --section-menu-to: 220 40% 35%;
-    --section-social-from: 220 80% 10%;
-    --section-social-to: 220 70% 18%;
-    --section-contact-from: 220 45% 30%;
-    --section-contact-to: 220 35% 40%;
-    --section-cta-from: 220 75% 15%;
-    --section-cta-to: 220 65% 25%;
-    --section-footer: 220 95% 2%;
+    /* Section Color Variations - Subtle unified flow */
+    --section-hero-from: 220 60% 4%;
+    --section-hero-to: 220 55% 8%;
+    --section-about-from: 220 58% 6%;
+    --section-about-to: 220 52% 12%;
+    --section-highlights-from: 220 56% 8%;
+    --section-highlights-to: 220 50% 14%;
+    --section-menu-from: 220 54% 10%;
+    --section-menu-to: 220 48% 16%;
+    --section-social-from: 220 52% 12%;
+    --section-social-to: 220 46% 18%;
+    --section-contact-from: 220 50% 14%;
+    --section-contact-to: 220 44% 20%;
+    --section-cta-from: 220 48% 16%;
+    --section-cta-to: 220 42% 22%;
+    --section-footer: 220 60% 3%;
     
     /* Gradients */
     --gradient-hero: linear-gradient(135deg, hsl(224 76% 25%), hsl(224 76% 48%));
