@@ -34,7 +34,7 @@ export const HeroSection = ({ onBookEvent }: HeroSectionProps) => {
         </p>
         
         <p className="text-lg text-gray-400 mb-12 max-w-xl mx-auto">
-          Established 2020 • 14th Street • Upscale Nightlife • Premium Cocktails
+          Established 2020 • Upscale Nightlife • Premium Cocktails
         </p>
 
         <div className="space-y-4 sm:space-y-0 sm:space-x-4 sm:flex sm:justify-center">
