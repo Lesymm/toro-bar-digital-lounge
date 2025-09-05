@@ -287,9 +287,25 @@ All colors MUST be HSL. Blue, black, grey palette with luxury touches.
     animation: shimmer 1.5s infinite;
   }
 
-  @keyframes shimmer {
-    0% { background-position: -200% 0; }
-    100% { background-position: 200% 0; }
+  /* Smooth Background Rotation Animation */
+  @keyframes background-rotate {
+    0%, 45% {
+      opacity: 1;
+    }
+    50%, 95% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .rotating-bg-1 {
+    animation: background-rotate 8s ease-in-out infinite;
+  }
+
+  .rotating-bg-2 {
+    animation: background-rotate 8s ease-in-out infinite reverse;
   }
 
   /* Smooth Section Transitions */

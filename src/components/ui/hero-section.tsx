@@ -19,16 +19,25 @@ export const HeroSection = ({ onBookEvent }: HeroSectionProps) => {
 
   return (
     <section className="parallax-container relative h-screen flex items-center justify-center overflow-hidden">
-      {/* Parallax Background */}
+      {/* Rotating Parallax Backgrounds */}
       <div 
-        className="parallax-bg absolute inset-0 bg-cover bg-center bg-no-repeat scale-110"
+        className="parallax-bg rotating-bg-1 absolute inset-0 bg-cover bg-center bg-no-repeat scale-110"
         style={{ 
-          backgroundImage: `url(/lovable-uploads/8ab2489d-6518-46a8-9fb2-91393640c518.png)`,
+          backgroundImage: `url(/lovable-uploads/be2f5cb5-4e41-4b05-a813-97f366bfbb9d.png)`,
           transform: `translate3d(0, ${scrollY * 0.5}px, 0)`
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70"></div>
       </div>
+      <div 
+        className="parallax-bg rotating-bg-2 absolute inset-0 bg-cover bg-center bg-no-repeat scale-110"
+        style={{ 
+          backgroundImage: `url(/lovable-uploads/360c3deb-ed0a-4563-bdeb-4cb4fcf8cdcd.png)`,
+          transform: `translate3d(0, ${scrollY * 0.4}px, 0)`
+        }}
+      >
+      </div>
+      {/* Enhanced Gradient Overlay for both images */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/75 via-black/45 to-black/75"></div>
 
       {/* Content */}
       <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
