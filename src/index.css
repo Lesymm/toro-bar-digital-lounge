@@ -50,7 +50,7 @@ All colors MUST be HSL. Blue, black, grey palette with luxury touches.
     --toro-gold: 45 100% 70%;
     --toro-silver: 0 0% 75%;
     
-    /* Section Color Variations - Aesthetic gradient flow */
+    /* Section Color Variations - Smooth flowing gradients */
     --section-hero-from: 220 90% 3%;
     --section-hero-to: 220 80% 8%;
     --section-about-from: 220 70% 12%;
@@ -290,5 +290,119 @@ All colors MUST be HSL. Blue, black, grey palette with luxury touches.
   @keyframes shimmer {
     0% { background-position: -200% 0; }
     100% { background-position: 200% 0; }
+  }
+
+  /* Smooth Section Transitions */
+  .section-curve-top {
+    position: relative;
+  }
+
+  .section-curve-top::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: inherit;
+    clip-path: ellipse(100% 100% at 50% 0%);
+  }
+
+  .section-curve-bottom {
+    position: relative;
+  }
+
+  .section-curve-bottom::after {
+    content: '';
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: inherit;
+    clip-path: ellipse(100% 100% at 50% 100%);
+  }
+
+  .section-diagonal-top {
+    position: relative;
+  }
+
+  .section-diagonal-top::before {
+    content: '';
+    position: absolute;
+    top: -25px;
+    left: 0;
+    width: 100%;
+    height: 25px;
+    background: inherit;
+    clip-path: polygon(0 100%, 100% 0, 100% 100%);
+  }
+
+  .section-diagonal-bottom {
+    position: relative;
+  }
+
+  .section-diagonal-bottom::after {
+    content: '';
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+    width: 100%;
+    height: 25px;
+    background: inherit;
+    clip-path: polygon(0 0, 100% 100%, 0 100%);
+  }
+
+  .section-wave-top {
+    position: relative;
+  }
+
+  .section-wave-top::before {
+    content: '';
+    position: absolute;
+    top: -40px;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background: inherit;
+    clip-path: polygon(0 20px, 20% 0, 40% 15px, 60% 0, 80% 20px, 100% 10px, 100% 100%, 0 100%);
+  }
+
+  .section-wave-bottom {
+    position: relative;
+  }
+
+  .section-wave-bottom::after {
+    content: '';
+    position: absolute;
+    bottom: -40px;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background: inherit;
+    clip-path: polygon(0 0, 100% 0, 100% 20px, 80% 40px, 60% 25px, 40% 40px, 20% 20px, 0 30px);
+  }
+
+  /* Blended Section Overlays */
+  .section-blend-overlay {
+    position: relative;
+  }
+
+  .section-blend-overlay::before {
+    content: '';
+    position: absolute;
+    top: -80px;
+    left: 0;
+    width: 100%;
+    height: 160px;
+    background: linear-gradient(to bottom, 
+      transparent 0%, 
+      rgba(var(--section-current), 0.3) 25%,
+      rgba(var(--section-current), 0.7) 50%,
+      rgba(var(--section-current), 0.9) 75%,
+      hsl(var(--section-current)) 100%
+    );
+    pointer-events: none;
+    z-index: -1;
   }
 }

@@ -6,7 +6,7 @@ interface BottomCtaSectionProps {
 
 export const BottomCtaSection = ({ onBookEvent }: BottomCtaSectionProps) => {
   return (
-    <section className="py-20 bg-gradient-to-r from-[hsl(var(--section-cta-from))] to-[hsl(var(--section-cta-to))]">
+    <section className="py-20 bg-gradient-to-r from-[hsl(var(--section-cta-from))] to-[hsl(var(--section-cta-to))] section-wave-top relative overflow-hidden">
       <div className="container mx-auto px-4 text-center">
         <h2 className="text-4xl md:text-5xl font-bold font-futura italic text-white mb-6">
           Ready to Experience Toro Bar?

@@ -43,7 +43,7 @@ const featuredDrinks = [
 
 export const MenuSection = () => {
   return (
-    <section className="py-20 bg-gradient-to-b from-[hsl(var(--section-menu-from))] to-[hsl(var(--section-menu-to))]">
+    <section className="py-20 bg-gradient-to-b from-[hsl(var(--section-menu-from))] to-[hsl(var(--section-menu-to))] section-wave-top section-diagonal-bottom relative overflow-hidden">
       <div className="container mx-auto px-4">
         <h2 className="section-title">Featured Cocktails</h2>
         
