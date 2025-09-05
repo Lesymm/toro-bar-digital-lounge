@@ -137,7 +137,6 @@ All colors MUST be HSL. Blue, black, grey palette with luxury touches.
   .hero-text {
     @apply text-6xl md:text-8xl font-black font-futura italic tracking-wider bg-gradient-to-r from-white via-blue-200 to-blue-400 bg-clip-text text-transparent;
     font-weight: 900;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   }
   
   .section-title {
