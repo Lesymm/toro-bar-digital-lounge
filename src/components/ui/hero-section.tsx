@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { Button } from "./button";
 
 interface HeroSectionProps {
@@ -5,14 +6,28 @@ interface HeroSectionProps {
 }
 
 export const HeroSection = ({ onBookEvent }: HeroSectionProps) => {
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <section className="relative h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image */}
+    <section className="parallax-container relative h-screen flex items-center justify-center overflow-hidden">
+      {/* Parallax Background */}
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(/lovable-uploads/8ab2489d-6518-46a8-9fb2-91393640c518.png)` }}
+        className="parallax-bg absolute inset-0 bg-cover bg-center bg-no-repeat scale-110"
+        style={{ 
+          backgroundImage: `url(/lovable-uploads/8ab2489d-6518-46a8-9fb2-91393640c518.png)`,
+          transform: `translate3d(0, ${scrollY * 0.5}px, 0)`
+        }}
       >
-        <div className="absolute inset-0 bg-black/60"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70"></div>
       </div>
 
       {/* Content */}
@@ -25,7 +40,7 @@ export const HeroSection = ({ onBookEvent }: HeroSectionProps) => {
           />
         </div>
         
-        <h1 className="hero-text mb-6">
+        <h1 className="hero-text mb-6 gradient-text">
           Toro Bar
         </h1>
         

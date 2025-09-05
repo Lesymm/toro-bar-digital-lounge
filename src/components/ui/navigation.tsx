@@ -30,7 +30,7 @@ export const Navigation = ({ currentPage, onPageChange }: NavigationProps) => {
               className="h-10 w-10"
             />
             <div className="flex flex-col">
-              <span className="text-2xl font-bold text-white">Toro Bar</span>
+              <span className="text-2xl font-black text-white tracking-wide">Toro Bar</span>
               <div className="flex items-center space-x-2">
                 <div className="w-4 h-0.5 bg-blue-400"></div>
                 <span className="text-xs font-medium text-blue-400 tracking-widest">WASHINGTON DC</span>

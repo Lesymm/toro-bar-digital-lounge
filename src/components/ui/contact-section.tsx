@@ -143,11 +143,11 @@ export const ContactSection = () => {
 
           {/* Contact Info */}
           <div className="space-y-6">
-            <Card className="bg-gray-900 border-gray-700">
+            <Card className="glass-card premium-shadow">
               <CardHeader>
                 <CardTitle className="text-white flex items-center space-x-2">
-                  <MapPin className="h-5 w-5 text-blue-400" />
-                  <span>Location</span>
+                  <MapPin className="h-5 w-5 text-blue-400 animate-glow-pulse" />
+                  <span className="gradient-text">Location</span>
                 </CardTitle>
               </CardHeader>
               <CardContent>
@@ -167,11 +167,11 @@ export const ContactSection = () => {
               </CardContent>
             </Card>
 
-            <Card className="bg-gray-900 border-gray-700">
+            <Card className="glass-card premium-shadow">
               <CardHeader>
                 <CardTitle className="text-white flex items-center space-x-2">
-                  <Clock className="h-5 w-5 text-blue-400" />
-                  <span>Hours</span>
+                  <Clock className="h-5 w-5 text-blue-400 animate-glow-pulse" />
+                  <span className="gradient-text">Hours</span>
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-2">
@@ -192,11 +192,11 @@ export const ContactSection = () => {
               </CardContent>
             </Card>
 
-            <Card className="bg-gray-900 border-gray-700">
+            <Card className="glass-card premium-shadow">
               <CardHeader>
                 <CardTitle className="text-white flex items-center space-x-2">
-                  <Mail className="h-5 w-5 text-blue-400" />
-                  <span>Get In Touch</span>
+                  <Mail className="h-5 w-5 text-blue-400 animate-glow-pulse" />
+                  <span className="gradient-text">Get In Touch</span>
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">

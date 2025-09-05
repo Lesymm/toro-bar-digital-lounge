@@ -28,7 +28,7 @@ export const StaffHighlights = () => {
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {galleryImages.map((image, index) => (
-              <div key={index} className="relative group overflow-hidden rounded-lg shadow-2xl hover:shadow-3xl transition-all duration-500 hover:-translate-y-1">
+              <div key={index} className="relative group overflow-hidden rounded-lg shadow-2xl hover:shadow-3xl transition-all duration-500 hover:-translate-y-1 hover-zoom glass-card premium-shadow">
                 <img 
                   src={image.src}
                   alt={image.alt}
@@ -39,16 +39,16 @@ export const StaffHighlights = () => {
                 {/* Caption overlay - centered and symmetrical */}
                 <div className="absolute inset-0 flex flex-col justify-center items-center text-center p-6 text-white">
                   <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                    <h3 className="text-2xl font-bold mb-3 text-blue-400 tracking-wide">{image.title}</h3>
-                    <div className="w-16 h-0.5 bg-blue-400 mx-auto mb-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-200"></div>
+                    <h3 className="text-2xl font-bold mb-3 text-blue-400 tracking-wide gradient-text">{image.title}</h3>
+                    <div className="w-16 h-0.5 bg-blue-400 mx-auto mb-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-200 animate-glow-pulse"></div>
                     <p className="text-gray-300 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-300 text-lg font-light">
                       {image.description}
                     </p>
                   </div>
                 </div>
                 
-                {/* Subtle glow effect */}
-                <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-blue-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                {/* Enhanced glow effect */}
+                <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-blue-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-glow-pulse"></div>
               </div>
             ))}
           </div>

@@ -49,17 +49,17 @@ export const MenuSection = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {featuredDrinks.map((drink, index) => (
-            <Card key={index} className="cocktail-card animate-slide-up group">
+            <Card key={index} className="cocktail-card animate-slide-up group hover-zoom premium-shadow">
               <CardHeader>
                 <div className="flex justify-between items-start mb-2">
-                  <CardTitle className="text-xl text-white group-hover:text-blue-400 transition-colors">
+                  <CardTitle className="text-xl text-white group-hover:text-blue-400 transition-colors gradient-text">
                     {drink.name}
                   </CardTitle>
-                  <span className="text-toro-gold font-bold text-lg">
+                  <span className="text-toro-gold font-bold text-lg animate-glow-pulse">
                     {drink.price}
                   </span>
                 </div>
-                <div className="inline-block px-3 py-1 bg-blue-600/20 text-blue-400 text-xs font-medium rounded-full">
+                <div className="inline-block px-3 py-1 bg-blue-600/20 text-blue-400 text-xs font-medium rounded-full animated-border">
                   {drink.category}
                 </div>
               </CardHeader>
