@@ -5,23 +5,8 @@ import { MapPin, Mail, Star, Clock, Phone, Facebook, Instagram } from "lucide-re
 export const ContactSection = () => {
   const [formSubmitted, setFormSubmitted] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
-    // Let Netlify handle the form submission
-    // On successful submit, show success message
-    setTimeout(() => {
-      setFormSubmitted(true);
-    }, 100);
-  };
-
   return (
     <section className="py-20 bg-gradient-to-b from-[hsl(var(--section-contact-from))] to-[hsl(var(--section-contact-to))] section-diagonal-top section-curve-bottom relative overflow-hidden">
-      {/* Hidden form for Netlify build-time detection */}
-      <form name="contact" data-netlify="true" netlify-honeypot="bot-field" hidden>
-        <input type="text" name="name" />
-        <input type="email" name="email" />
-        <input type="tel" name="phone" />
-        <textarea name="message"></textarea>
-      </form>
       
       <div className="container mx-auto px-4">
         <h2 className="section-title">Contact & Events</h2>
@@ -48,12 +33,11 @@ export const ContactSection = () => {
                   method="POST" 
                   data-netlify="true"
                   netlify-honeypot="bot-field"
-                  onSubmit={handleSubmit}
                   className="space-y-6"
                 >
                   <input type="hidden" name="form-name" value="contact" />
                   <p hidden>
-                    <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+                    <label>Don't fill this out: <input name="bot-field" /></label>
                   </p>
 
                   <div>
