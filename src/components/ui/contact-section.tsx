@@ -15,6 +15,14 @@ export const ContactSection = () => {
 
   return (
     <section className="py-20 bg-gradient-to-b from-[hsl(var(--section-contact-from))] to-[hsl(var(--section-contact-to))] section-diagonal-top section-curve-bottom relative overflow-hidden">
+      {/* Hidden form for Netlify build-time detection */}
+      <form name="contact" data-netlify="true" netlify-honeypot="bot-field" hidden>
+        <input type="text" name="name" />
+        <input type="email" name="email" />
+        <input type="tel" name="phone" />
+        <textarea name="message"></textarea>
+      </form>
+      
       <div className="container mx-auto px-4">
         <h2 className="section-title">Contact & Events</h2>
         
