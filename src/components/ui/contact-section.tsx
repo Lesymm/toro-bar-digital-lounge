@@ -1,70 +1,16 @@
 import { useState } from "react";
-import emailjs from "@emailjs/browser";
-import { Button } from "./button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./card";
-import { Input } from "./input";
-import { Textarea } from "./textarea";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./select";
 import { MapPin, Mail, Star, Clock, Phone, Facebook, Instagram } from "lucide-react";
-import { useToast } from "@/hooks/use-toast";
 
 export const ContactSection = () => {
-  const { toast } = useToast();
-  const [isLoading, setIsLoading] = useState(false);
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    eventDetails: ""
-  });
+  const [formSubmitted, setFormSubmitted] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsLoading(true);
-    
-    try {
-      // EmailJS configuration
-      const serviceID = "service_jhm3k8j";
-      const templateID = "template_2p43ptb";
-      const publicKey = "Q8806e5qKIZWdvdv0";
-      
-      // Template parameters matching your EmailJS template
-      const templateParams = {
-        from_name: formData.name,
-        reply_to: formData.email,
-        phone: formData.phone,
-        event_details: formData.eventDetails || "No event details provided."
-      };
-      
-      await emailjs.send(serviceID, templateID, templateParams, publicKey);
-      
-      toast({
-        title: "Event Inquiry Sent!",
-        description: "Your event inquiry has been submitted successfully. We'll get back to you within 24 hours.",
-      });
-      
-      // Reset form
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        eventDetails: ""
-      });
-      
-    } catch (error) {
-      console.error("EmailJS Error:", error);
-      toast({
-        title: "Error",
-        description: "Failed to send your inquiry. Please try again or contact us directly.",
-        variant: "destructive",
-      });
-    } finally {
-      setIsLoading(false);
-    }
-  };
-
-  const handleInputChange = (field: string, value: string) => {
-    setFormData(prev => ({ ...prev, [field]: value }));
+  const handleSubmit = (e: React.FormEvent) => {
+    // Let Netlify handle the form submission
+    // On successful submit, show success message
+    setTimeout(() => {
+      setFormSubmitted(true);
+    }, 100);
   };
 
   return (
@@ -82,62 +28,86 @@ export const ContactSection = () => {
               </CardDescription>
             </CardHeader>
             <CardContent>
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div>
-                  <label className="text-white text-sm font-medium mb-2 block">Name *</label>
-                  <Input
-                    required
-                    value={formData.name}
-                    onChange={(e) => handleInputChange("name", e.target.value)}
-                    className="bg-gray-800 border-gray-600 text-white"
-                    placeholder="Your name"
-                  />
-                </div>
-
-                <div>
-                  <label className="text-white text-sm font-medium mb-2 block">Email *</label>
-                  <Input
-                    type="email"
-                    required
-                    value={formData.email}
-                    onChange={(e) => handleInputChange("email", e.target.value)}
-                    className="bg-gray-800 border-gray-600 text-white"
-                    placeholder="your@email.com"
-                  />
-                </div>
-
-                <div>
-                  <label className="text-white text-sm font-medium mb-2 block">Phone *</label>
-                  <Input
-                    type="tel"
-                    required
-                    value={formData.phone}
-                    onChange={(e) => handleInputChange("phone", e.target.value)}
-                    className="bg-gray-800 border-gray-600 text-white"
-                    placeholder="(555) 123-4567"
-                  />
-                </div>
-
-                <div>
-                  <label className="text-white text-sm font-medium mb-2 block">Event Details *</label>
-                  <Textarea
-                    required
-                    value={formData.eventDetails}
-                    onChange={(e) => handleInputChange("eventDetails", e.target.value)}
-                    className="bg-gray-800 border-gray-600 text-white"
-                    placeholder="Tell us about your event: type, date, number of guests, special requests, etc."
-                    rows={5}
-                  />
-                </div>
-
-                <Button 
-                  type="submit" 
-                  className="luxury-button w-full"
-                  disabled={isLoading}
+              {/* 
+                IMPORTANT: After deployment, enable Netlify Form notifications:
+                1. Go to Netlify Dashboard → Forms → contact → Notifications → Email notification
+                2. Set Recipient: torobardc@gmail.com
+                3. Add another notification with BCC: waseem@tranquilmedia.com
+              */}
+              {!formSubmitted ? (
+                <form 
+                  name="contact" 
+                  method="POST" 
+                  data-netlify="true" 
+                  netlify-honeypot="bot-field"
+                  onSubmit={handleSubmit}
+                  className="space-y-6"
                 >
-                  {isLoading ? "Sending..." : "Send Event Inquiry"}
-                </Button>
-              </form>
+                  <input type="hidden" name="form-name" value="contact" />
+                  <p hidden>
+                    <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+                  </p>
+
+                  <div>
+                    <label htmlFor="name" className="text-white text-sm font-medium mb-2 block">Name *</label>
+                    <input
+                      id="name"
+                      name="name"
+                      type="text"
+                      required
+                      placeholder="Your name"
+                      className="flex h-10 w-full rounded-xl border border-gray-600 bg-[#1E293B] px-3 py-2 text-sm text-white ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-gray-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                    />
+                  </div>
+
+                  <div>
+                    <label htmlFor="email" className="text-white text-sm font-medium mb-2 block">Email *</label>
+                    <input
+                      id="email"
+                      name="email"
+                      type="email"
+                      required
+                      placeholder="your@email.com"
+                      className="flex h-10 w-full rounded-xl border border-gray-600 bg-[#1E293B] px-3 py-2 text-sm text-white ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-gray-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                    />
+                  </div>
+
+                  <div>
+                    <label htmlFor="phone" className="text-white text-sm font-medium mb-2 block">Phone</label>
+                    <input
+                      id="phone"
+                      name="phone"
+                      type="tel"
+                      placeholder="(555) 123-4567"
+                      className="flex h-10 w-full rounded-xl border border-gray-600 bg-[#1E293B] px-3 py-2 text-sm text-white ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-gray-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                    />
+                  </div>
+
+                  <div>
+                    <label htmlFor="message" className="text-white text-sm font-medium mb-2 block">Message *</label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      required
+                      placeholder="Tell us about your event: type, date, guest count, special requests…"
+                      rows={5}
+                      className="flex min-h-[120px] w-full rounded-xl border border-gray-600 bg-[#1E293B] px-3 py-2 text-sm text-white ring-offset-background placeholder:text-gray-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                    />
+                  </div>
+
+                  <button
+                    type="submit"
+                    className="luxury-button w-full"
+                  >
+                    Send Event Inquiry
+                  </button>
+                </form>
+              ) : (
+                <div id="form-success" className="text-center p-8">
+                  <div className="text-green-400 text-lg font-medium mb-2">Thanks! We got your request.</div>
+                  <p className="text-gray-300">A team member will reach out within 24 hours.</p>
+                </div>
+              )}
             </CardContent>
           </Card>
 
