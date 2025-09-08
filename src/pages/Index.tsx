@@ -8,7 +8,7 @@ import { SocialProofSection } from "@/components/ui/social-proof-section";
 import { ContactSection } from "@/components/ui/contact-section";
 import { BottomCtaSection } from "@/components/ui/bottom-cta-section";
 import { Footer } from "@/components/ui/footer";
-import { FloatingActionButton } from "@/components/ui/floating-action-button";
+
 
 const Index = () => {
   const [currentPage, setCurrentPage] = useState("home");
@@ -75,9 +75,6 @@ const Index = () => {
       </main>
 
       <Footer />
-      
-      {/* Floating Action Button */}
-      <FloatingActionButton onBookEvent={handleBookEvent} />
     </div>
   );
 };
