@@ -37,17 +37,22 @@ export const ContactSection = () => {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-b from-[hsl(var(--section-contact-from))] to-[hsl(var(--section-contact-to))] section-diagonal-top section-curve-bottom relative overflow-hidden">
-      
-      <div className="container mx-auto px-4">
-        <h2 className="section-title">Contact & Events</h2>
+    <section className="py-24 bg-gradient-to-b from-[hsl(var(--section-contact-from))] to-[hsl(var(--section-contact-to))] section-diagonal-top section-curve-bottom relative overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_transparent_0%,_rgba(59,130,246,0.05)_100%)]" />
+
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="text-center mb-16">
+          <h2 className="text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-white via-blue-100 to-blue-300 bg-clip-text text-transparent">
+            Get In Touch
+          </h2>
+          <p className="text-gray-400 text-lg">Book your event or visit us today</p>
+        </div>
         
         <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-          {/* Contact Form */}
-          <Card className="bg-gray-900 border-gray-700">
+          <Card className="bg-gradient-to-br from-white/[0.07] to-white/[0.02] backdrop-blur-sm border border-white/10">
             <CardHeader>
-              <CardTitle className="text-2xl text-white">Book Your Event</CardTitle>
-              <CardDescription className="text-gray-400">
+              <CardTitle className="text-3xl font-bold text-white mb-2">Book Your Event</CardTitle>
+              <CardDescription className="text-gray-300 text-base">
                 Planning a private party, corporate event, or special celebration? Let's make it unforgettable.
               </CardDescription>
             </CardHeader>
@@ -72,56 +77,56 @@ export const ContactSection = () => {
                 </p>
 
                 <div>
-                  <label htmlFor="name" className="text-white text-sm font-medium mb-2 block">Name *</label>
+                  <label htmlFor="name" className="text-white text-sm font-semibold mb-2 block">Name *</label>
                   <input
                     id="name"
                     name="name"
                     type="text"
                     required
                     placeholder="Your name"
-                    className="flex h-10 w-full rounded-xl border border-gray-600 bg-[#1E293B] px-3 py-2 text-sm text-white ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-gray-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                    className="flex h-12 w-full rounded-lg border border-white/20 bg-white/5 backdrop-blur-sm px-4 py-3 text-base text-white placeholder:text-gray-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:border-blue-400 disabled:cursor-not-allowed disabled:opacity-50 transition-all"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="text-white text-sm font-medium mb-2 block">Email *</label>
+                  <label htmlFor="email" className="text-white text-sm font-semibold mb-2 block">Email *</label>
                   <input
                     id="email"
                     name="email"
                     type="email"
                     required
                     placeholder="your@email.com"
-                    className="flex h-10 w-full rounded-xl border border-gray-600 bg-[#1E293B] px-3 py-2 text-sm text-white ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-gray-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                    className="flex h-12 w-full rounded-lg border border-white/20 bg-white/5 backdrop-blur-sm px-4 py-3 text-base text-white placeholder:text-gray-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:border-blue-400 disabled:cursor-not-allowed disabled:opacity-50 transition-all"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="phone" className="text-white text-sm font-medium mb-2 block">Phone</label>
+                  <label htmlFor="phone" className="text-white text-sm font-semibold mb-2 block">Phone</label>
                   <input
                     id="phone"
                     name="phone"
                     type="tel"
                     placeholder="(555) 123-4567"
-                    className="flex h-10 w-full rounded-xl border border-gray-600 bg-[#1E293B] px-3 py-2 text-sm text-white ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-gray-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                    className="flex h-12 w-full rounded-lg border border-white/20 bg-white/5 backdrop-blur-sm px-4 py-3 text-base text-white placeholder:text-gray-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:border-blue-400 disabled:cursor-not-allowed disabled:opacity-50 transition-all"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="text-white text-sm font-medium mb-2 block">Message *</label>
+                  <label htmlFor="message" className="text-white text-sm font-semibold mb-2 block">Message *</label>
                   <textarea
                     id="message"
                     name="message"
                     required
                     placeholder="Tell us about your event: type, date, guest count, special requests…"
                     rows={5}
-                    className="flex min-h-[120px] w-full rounded-xl border border-gray-600 bg-[#1E293B] px-3 py-2 text-sm text-white ring-offset-background placeholder:text-gray-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                    className="flex min-h-[140px] w-full rounded-lg border border-white/20 bg-white/5 backdrop-blur-sm px-4 py-3 text-base text-white placeholder:text-gray-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:border-blue-400 disabled:cursor-not-allowed disabled:opacity-50 transition-all resize-none"
                   />
                 </div>
 
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="luxury-button w-full disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-500 hover:to-blue-600 text-white font-semibold px-8 py-4 rounded-lg shadow-lg shadow-blue-500/30 hover:shadow-blue-500/50 transition-all duration-300 hover:scale-[1.02] disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
                 >
                   {isSubmitting ? "Sending..." : "Send Event Inquiry"}
                 </button>
@@ -129,18 +134,19 @@ export const ContactSection = () => {
             </CardContent>
           </Card>
 
-          {/* Contact Info */}
           <div className="space-y-6">
-            <Card className="glass-card premium-shadow">
+            <Card className="bg-gradient-to-br from-white/[0.07] to-white/[0.02] backdrop-blur-sm border border-white/10">
               <CardHeader>
-                <CardTitle className="text-white flex items-center space-x-2">
-                  <MapPin className="h-5 w-5 text-blue-400 animate-glow-pulse" />
-                  <span className="gradient-text">Location</span>
+                <CardTitle className="text-white flex items-center space-x-3 text-xl">
+                  <div className="p-2 rounded-lg bg-blue-500/20">
+                    <MapPin className="h-5 w-5 text-blue-400" />
+                  </div>
+                  <span>Location</span>
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-300 mb-4">3708 14th St NW, Washington, DC 20010</p>
-                <div className="bg-gray-800 rounded-lg overflow-hidden h-48">
+                <p className="text-gray-200 mb-4 text-lg font-medium">3708 14th St NW, Washington, DC 20010</p>
+                <div className="bg-black/30 rounded-lg overflow-hidden h-56 border border-white/10">
                   <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3105.1524687084097!2d-77.0327999!3d38.9173744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7b7f8b1234567%3A0x1234567890abcdef!2s14th%20St%20NW%2C%20Washington%2C%20DC!5e0!3m2!1sen!2sus!4v1234567890123"
                     width="100%"
@@ -155,36 +161,40 @@ export const ContactSection = () => {
               </CardContent>
             </Card>
 
-            <Card className="glass-card premium-shadow">
+            <Card className="bg-gradient-to-br from-white/[0.07] to-white/[0.02] backdrop-blur-sm border border-white/10">
               <CardHeader>
-                <CardTitle className="text-white flex items-center space-x-2">
-                  <Clock className="h-5 w-5 text-blue-400 animate-glow-pulse" />
-                  <span className="gradient-text">Hours</span>
+                <CardTitle className="text-white flex items-center space-x-3 text-xl">
+                  <div className="p-2 rounded-lg bg-blue-500/20">
+                    <Clock className="h-5 w-5 text-blue-400" />
+                  </div>
+                  <span>Hours</span>
                 </CardTitle>
               </CardHeader>
-              <CardContent className="space-y-2">
-                <div className="flex justify-between">
-                  <span className="text-gray-400">Sunday - Thursday</span>
-                  <span className="text-white">5PM - 2AM</span>
+              <CardContent className="space-y-3">
+                <div className="flex justify-between items-center py-2">
+                  <span className="text-gray-300">Sunday - Thursday</span>
+                  <span className="text-white font-semibold">5PM - 2AM</span>
                 </div>
-                <div className="flex justify-between">
-                  <span className="text-gray-400">Friday - Saturday</span>
-                  <span className="text-white">5PM - 3AM</span>
+                <div className="flex justify-between items-center py-2">
+                  <span className="text-gray-300">Friday - Saturday</span>
+                  <span className="text-white font-semibold">5PM - 3AM</span>
                 </div>
-                <div className="border-t border-gray-700 mt-3 pt-3">
-                  <div className="flex justify-between">
-                    <span className="text-blue-400 font-medium">Happy Hour</span>
-                    <span className="text-blue-400 font-medium">5PM - 9PM Daily</span>
+                <div className="border-t border-white/10 mt-3 pt-3">
+                  <div className="flex justify-between items-center py-2 bg-blue-500/10 rounded-lg px-3">
+                    <span className="text-blue-400 font-semibold">Happy Hour</span>
+                    <span className="text-blue-400 font-semibold">5PM - 9PM Daily</span>
                   </div>
                 </div>
               </CardContent>
             </Card>
 
-            <Card className="glass-card premium-shadow">
+            <Card className="bg-gradient-to-br from-white/[0.07] to-white/[0.02] backdrop-blur-sm border border-white/10">
               <CardHeader>
-                <CardTitle className="text-white flex items-center space-x-2">
-                  <Mail className="h-5 w-5 text-blue-400 animate-glow-pulse" />
-                  <span className="gradient-text">Get In Touch</span>
+                <CardTitle className="text-white flex items-center space-x-3 text-xl">
+                  <div className="p-2 rounded-lg bg-blue-500/20">
+                    <Mail className="h-5 w-5 text-blue-400" />
+                  </div>
+                  <span>Contact</span>
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">

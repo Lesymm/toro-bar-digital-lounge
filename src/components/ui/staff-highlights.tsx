@@ -21,34 +21,47 @@ const galleryImages = [
 
 export const StaffHighlights = () => {
   return (
-    <section className="py-12 bg-gradient-to-b from-[hsl(var(--section-highlights-from))] to-[hsl(var(--section-highlights-to))] section-diagonal-top section-wave-bottom relative overflow-hidden">
-      <div className="container mx-auto px-4">
-        <h2 className="section-title mb-8">The Toro Bar Experience</h2>
-        
-        <div className="max-w-6xl mx-auto">
+    <section className="py-24 bg-gradient-to-b from-[hsl(var(--section-highlights-from))] to-[hsl(var(--section-highlights-to))] section-diagonal-top section-wave-bottom relative overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_transparent_0%,_rgba(59,130,246,0.08)_100%)]" />
+
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="text-center mb-16">
+          <h2 className="text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-white via-blue-100 to-blue-300 bg-clip-text text-transparent">
+            The Toro Bar Experience
+          </h2>
+          <p className="text-gray-400 text-lg">Where every night becomes unforgettable</p>
+        </div>
+
+        <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {galleryImages.map((image, index) => (
-              <div key={index} className="relative group overflow-hidden rounded-lg shadow-2xl hover:shadow-3xl transition-all duration-500 hover:-translate-y-1 hover-zoom glass-card premium-shadow">
-                <img 
-                  src={image.src}
-                  alt={image.alt}
-                  className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-700"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent"></div>
-                
-                {/* Caption overlay - centered and symmetrical */}
-                <div className="absolute inset-0 flex flex-col justify-center items-center text-center p-6 text-white">
-                  <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                    <h3 className="text-2xl font-bold mb-3 text-blue-400 tracking-wide gradient-text">{image.title}</h3>
-                    <div className="w-16 h-0.5 bg-blue-400 mx-auto mb-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-200 animate-glow-pulse"></div>
-                    <p className="text-gray-300 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-300 text-lg font-light">
+              <div
+                key={index}
+                className="relative group overflow-hidden rounded-2xl shadow-2xl transition-all duration-500 hover:-translate-y-2 hover:shadow-blue-500/20"
+              >
+                <div className="relative h-96 overflow-hidden">
+                  <img
+                    src={image.src}
+                    alt={image.alt}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent" />
+                </div>
+
+                <div className="absolute inset-0 flex flex-col justify-end p-8">
+                  <div className="transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+                    <h3 className="text-3xl font-bold mb-3 text-white group-hover:text-blue-300 transition-colors">
+                      {image.title}
+                    </h3>
+                    <div className="w-20 h-1 bg-gradient-to-r from-blue-400 to-blue-600 mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                    <p className="text-gray-200 text-lg font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
                       {image.description}
                     </p>
                   </div>
                 </div>
-                
-                {/* Enhanced glow effect */}
-                <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-blue-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-glow-pulse"></div>
+
+                <div className="absolute inset-0 rounded-2xl border-2 border-transparent group-hover:border-blue-500/50 transition-all duration-500" />
+                <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-blue-500/0 to-blue-500/0 group-hover:from-blue-500/10 group-hover:to-transparent transition-all duration-500" />
               </div>
             ))}
           </div>
